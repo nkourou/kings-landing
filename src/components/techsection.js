@@ -1,6 +1,5 @@
 import React from "react";
 import { FaRegCheckCircle } from 'react-icons/fa';
-import { techImg } from "../images/undraw_wishes_icyp.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
 const TechSection = () => {
@@ -21,7 +20,6 @@ const TechSection = () => {
             </div>
             <div className="column">
               <figure className="image">
-                {/* <img src={ techImg } alt="tech image"/> */}
                 <StaticImage src="../images/undraw_wishes_icyp.svg" alt="tech image"/>
               </figure>
             </div>
@@ -99,7 +97,7 @@ const TechSection = () => {
             other things. Our AI assesses your writing style and teaches you to
             break bad habits and build new ones.
           </h2>
-          <form>
+          {/* <form>
             <audio></audio>
             <div className="field">
               <label className="label">
@@ -125,7 +123,7 @@ const TechSection = () => {
                 <button className="button is-link is-light">No idea!</button>
               </div>
             </div>
-          </form>
+          </form> */}
         </section>
 
         <section className="section">
@@ -136,7 +134,7 @@ const TechSection = () => {
             See if you can extract information from this audio and answer the
             following question:
           </h3>
-          <form>
+          {/* <form>
             <audio></audio>
             <div className="field">
               <label className="label">
@@ -159,7 +157,7 @@ const TechSection = () => {
                 <button className="button is-link is-light">No idea!</button>
               </div>
             </div>
-          </form>
+          </form> */}
         </section>
 
         <section className="section">

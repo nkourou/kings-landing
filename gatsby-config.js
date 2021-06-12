@@ -15,7 +15,7 @@ module.exports = {
     github: `https://github.com/ieltsgeek`,
     medium: 'https://medium.com/@ieltsgeek',
     siteUrl: process.env.ROOT_URL || 'https://ieltsgeek.com',
-    appUrl: "https://app.ieltsgeek.com"
+    appUrl: process.env.APP_URL || "https://app.ieltsgeek.com"
   },
   plugins: [
     "gatsby-plugin-sass",

@@ -3,7 +3,6 @@ import patternImg from "../images/pattern.png";
 import dashboardImg from "../images/dashboard.png";
 import "./style.scss";
 import Typed from "typed.js";
-import { StaticImage } from "gatsby-plugin-image";
 
 // class Header extends React.Component {
 const Header = () => {

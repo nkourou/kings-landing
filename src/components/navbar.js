@@ -14,13 +14,13 @@ const Navbar = () => {
 						<img src={bulmaLogo} alt="logo" />
 					</Link>
 
-					<a className={`navbar-burger ${isShowMenu ? 'is-active' : ''}`}
+					<button className={`navbar-burger button is-ghost ${isShowMenu ? 'is-active' : ''}`}
 						onClick={() => setState(!isShowMenu)}
 						data-toggle="side-menu" aria-expanded="false" aria-label="Toggle navigation">
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
-					</a>
+					</button>
 				</div>
 
 				<div id="navbarLinks" className={`navbar-menu is-size-4 ${isShowMenu ? 'is-active' : ''}`}>

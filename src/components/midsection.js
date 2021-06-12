@@ -4,7 +4,6 @@ import fixingBugsSvg from "../images/undraw_fixing_bugs_w7gi.svg";
 import masterPlanSvg from "../images/undraw_Master_plan_re_jvit.svg";
 import Emoji from "./emoji";
 import { StaticImage } from "gatsby-plugin-image";
-import { FaGlobeAsia } from "react-icons/fa";
 
 const Midsection = () => {
   return (

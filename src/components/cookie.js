@@ -8,7 +8,6 @@ const Cookie = () => {
   
   useEffect(() => {
     setState(localStorage.getItem('has_cookie_consent') === 'true')
-    console.log(isHaveCookieConsent);
   }, [])
 
   const enableCookies = () => {

@@ -1,7 +1,4 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
-import { Link } from 'gatsby';
 import Emoji from './emoji';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
@@ -18,6 +15,9 @@ const Pricing = () => {
                 <p className="card-header-title is-size-2">
                   Pricing
                 </p>
+                <span className="tag is-warning is-large is-size-1 has-text-weight-bold">
+                    $49
+                </span>
               </header>
               <div className="card-content">
                 <div className="content is-size-5">

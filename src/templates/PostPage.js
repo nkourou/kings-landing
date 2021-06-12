@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
-import { StaticImage } from "gatsby-plugin-image";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import { FaTwitter, FaFacebook, FaLinkedin, FaHeart } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+// import { FaTwitter, FaFacebook, FaLinkedin, FaHeart } from "react-icons/fa";
 
 export const pageQuery = graphql`
   query PostPageQuery($id: ID!) {
@@ -61,13 +61,13 @@ const PostPage = ({
       <div className="has-text-centered">
         <h1 className="title is-size-1">{post.title}</h1>
         <h3 className="subtitle">{post.excerpt}</h3>
-        <img src={post.coverImage.url} />
+        <img src={post.coverImage.url} alt="cover" />
       </div>
       <section className="section">
         <article className="media mb-5">
           <figure className="media-left">
             <p className="image is-64x64">
-              <img src={post.author.picture.url} className="is-rounded" />
+              <img src={post.author.picture.url} alt="author" className="is-rounded" />
             </p>
           </figure>
           <div className="media-content">
@@ -79,8 +79,8 @@ const PostPage = ({
                 <RichText
                   content={post.content.raw}
                   renderers={{
-                    img: ({ children, ...rest }) => (
-                      <StaticImage {...rest}>{children}</StaticImage>
+                    img: ({ children, alt, ...rest }) => (
+                      <img alt={alt} {...rest}>{children}</img>
                     ),
                     bold: ({ children }) => <strong>{children}</strong>,
                     a: ({ children, openInNewTab, href, rel, ...rest }) => {
@@ -88,8 +88,8 @@ const PostPage = ({
                         return (
                           <a
                             href={href}
-                            target={openInNewTab ? "_blank" : "_self"}
-                            rel={rel || "noopener noreferrer"}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             {...rest}
                           >
                             {children}
@@ -126,11 +126,11 @@ const PostPage = ({
                   className="level-item"
                   target="_blank"
                   rel="noreferrer"
-                  // href={data.site.siteMetadata.twitter}
+                  href='https://twitter.com/intent/tweet?hashtags=ielts%2Ctutor%2Cprep&amp;original_referer=https%3A%2F%2Fieltsgeek.com%2F&amp;ref_src=twsrc%5Etfw&amp;related=twitterapi%2Ctwitter&amp;text=Great%20tips%20to%20prepare%20for%20IELTS&amp;tw_p=ieltsgeek&amp;url=https%3A%2F%2Fieltsgeek.com%2Fblog%2F&amp;via=ieltsgeek'
                 >
                   <FaTwitter className="mr-2" size={25} />
                 </a>
-                <a className="level-item">
+                {/* <a className="level-item">
                   <FaFacebook className="mr-2" size={25} />
                 </a>
                 <a className="level-item">
@@ -138,7 +138,7 @@ const PostPage = ({
                 </a>
                 <div className="level-item">
                   <FaHeart className="mr-2" size={25} />
-                </div>
+                </div> */}
               </div>
             </nav>
           </div>
@@ -146,7 +146,7 @@ const PostPage = ({
         {post.relatedPosts.length > 0 && (
           <div className="tabs is-large">
             <ul>
-              <li className="is-active"><a>Further reading</a></li>
+              <li>Further reading</li>
             </ul>
           </div>
         )}
