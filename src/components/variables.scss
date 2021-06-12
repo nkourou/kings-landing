@@ -1,0 +1,39 @@
+// VARIABLES
+$body-font-size: 1.25em;
+$body-color: #998DA0;
+
+$primary-color: #2980b9;
+$secondary-color: #6dd5fa;
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #0d24f3;
+$pink: #f70340;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+
+// Update some of Bulma's component variables
+// $control-border-width: 2px;
+// $input-background-color: $beige-lighter;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+$speaking-color: linear-gradient(30deg, #FF7B00, #FFC300);
+$writing-color: linear-gradient(30deg, #EE33FF, #00D4FF);
+$listening-color: linear-gradient(30deg, #0567FA, #C561FF);
+$reading-color: linear-gradient(30deg, #005EFF, #00F8E3);
+
+$card-radius: 2em;
+$card-shadow: none;
+
+$card-background-gradient: linear-gradient(0deg, rgba(246,250,255, 1), rgba(246,250,255, 0));;

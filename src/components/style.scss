@@ -1,0 +1,214 @@
+// Importing variables
+@import './variables.scss';
+
+// Importing Bulma from node_modules
+@import '~bulma/bulma.sass';
+
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
+	position: sticky;
+}
+
+ul>li {
+	list-style-type: none;
+	margin-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 769px) {
+	.text-5xl {
+		font-size: 4rem !important;
+	}
+}
+.w-6 {
+	width: 1.5rem;
+}
+
+.h-6 {
+	height: 1.5rem;
+}
+
+.w-4 {
+	width: 1rem;
+}
+.h-4 {
+	height: 1rem;
+}
+
+audio, canvas, embed, iframe, img object, svg, video {
+	// display: block;
+	vertical-align: middle;
+}
+
+.text-brand-blue {
+	color: $primary-color;
+}
+
+.border-brand-blue {
+	border-color: $primary-color;
+}
+
+.border-2 {
+	border-width: 2px;
+}
+
+.loop-svg {
+	width: 1em;
+	height: 1em;
+	background-size: 10px 10px;
+	fill: #363636;
+}
+
+/* h2.subtitle {
+	font-size: 2rem !important;   
+} */
+
+[class*="has-background"].has-background {
+	background-color: #FBFBFD;
+}
+
+.card {
+	position: relative;
+	transition: all 50ms ease-in-out;
+	height: 100%;
+	background: $card-background-gradient;
+}
+
+.card:hover {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	// transform: scale(1.02);
+}
+
+.vr {
+	border-left: 2px solid rgb(230, 228, 228);
+	height:1.7rem; 
+	align-self: center;
+}
+
+.hero.is-warning {
+	background-color: #ffdd57;
+	color: rgba(0,0,0,0.7);
+}
+
+.wrap-speaking {
+	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	color: snow; 
+}
+
+.speaking-text {
+	background: $speaking-color;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.writing-text {
+	background: $writing-color;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.listening-text {
+	background: $listening-color;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.reading-text {
+	background: $reading-color;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.wrap-listening {
+	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
+	background: rgb(215, 246, 112);
+	color: snow; 
+}
+
+.wrap-writing {
+	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
+	background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+	color: snow; 
+}
+
+.wrap-reading {
+	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
+	// background: linear-gradient(45deg, #3023AE 0%, #f09 100%);
+	background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+	color: snow; 
+}
+
+
+.is-centered-absolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%)!important;
+}
+
+.tertiary-header-action {
+	right: 1.5em;
+	top: 1.5em;
+	z-index: 99;
+	position: fixed;
+}
+
+.header-image {
+	position: absolute;
+	top: 9%;
+	left: 14%;
+	width: 72%;
+	height: 66%;
+	transition: all 100ms ease-in-out;
+}
+
+.header-image:hover {
+	top: -20%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+}
+
+a.navbar-item.active-link {
+	background-color: transparent !important;
+	box-shadow: inset 0 0 0 2px $primary-light !important;
+}
+
+.cookie-consent {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 1.5rem;
+	z-index: 99;
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%);
+	border-radius: 10px;
+	overflow: hidden;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 172ms ease 500ms, transform 258ms ease 500ms;
+	background-image: url(../images/undraw_cookie_love_ulvn.svg);
+	background-size: 150px 140px;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+@media screen and (min-width: 769px) {
+	.cookie-consent {
+		max-width: 24em;
+		left: auto;
+	}
+}
