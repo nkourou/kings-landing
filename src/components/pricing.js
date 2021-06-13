@@ -49,6 +49,12 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
+                        Unlimited Reading and Listening mock tests
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <FaRegCheckCircle className="mr-2 has-text-success"/>
                         Pay minimal for further evaluations if needed
                       </p>
                     </li>

@@ -27,7 +27,7 @@ const HelmetC = () => (
 
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=5"
+          content="width=device-width, initial-scale=1, , minimum-scale=1.0"
         />
         <meta name="description" content={data.site.siteMetadata.description} />
         <meta name="keywords" content={data.site.siteMetadata.keywords} />

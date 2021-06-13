@@ -21,7 +21,7 @@ const Cookie = () => {
         aria-live="polite"
         aria-label="cookieconsent"
         aria-describedby="cookieconsent:desc"
-        className={`cookie-consent ${isHaveCookieConsent ? 'is-hidden': ''}`}
+        className={`cookie-consent box ${isHaveCookieConsent ? 'is-hidden': ''}`}
       >
         <div className="content">
           <p id="cookieconsent:desc" className="cc-message">
@@ -35,7 +35,15 @@ const Cookie = () => {
               Our privacy policy
             </Link>
             .
+        </p>
+        <div className="is-hidden-mobile">
+          <p>
+            IELTS is a registered trademark of University of Cambridge ESOL, the British Council, and IDP Education Australia.
           </p>
+          <p>
+          <strong>ieltsgeek.com</strong> is not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia. All other trademarks on this website are the property of their respective owners.
+          </p>
+        </div>
         </div>
         <div className="cc-compliance">
           <button

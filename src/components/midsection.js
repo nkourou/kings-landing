@@ -114,9 +114,7 @@ const Midsection = () => {
                   Personalized learning
                 </h1>
                 <p className="subtitle" data-config-id="desc1">
-                  We leverage bleeding edge advancements in learning science as
-                  well as behavorial psychology to build short modules that you
-                  can finish these modules in 10 minutes.
+                  Not only is the content personal to you, we also ramp up the time your need to spend per day as the exam day reaches closer in order to optimize your target band score. Yes, our AI tunes your learning path after every module you do!
                 </p>
               </div>
             </div>
@@ -142,9 +140,9 @@ const Midsection = () => {
                   Artifical Intelligence
                 </h1>
                 <p className="subtitle" data-config-id="desc2">
-                  We use the latest in NLP and ASR to get deeper insights
-                  into your skills level. You can access your skills report
-                  anytime from the dashboard!
+                  We use the latest in NLP, ASR and learning science to get deeper insights
+                  into your skills level. We build short modules that you
+                  can finish these modules in 10 minutes.
                 </p>
               </div>
             </div>
