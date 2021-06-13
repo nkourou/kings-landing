@@ -18,11 +18,7 @@ const TechSection = () => {
                 for a student based on their specific needs.
               </h2>
             </div>
-            <div className="column">
-              <figure className="image">
-                <StaticImage src="../images/undraw_wishes_icyp.svg" alt="tech image"/>
-              </figure>
-            </div>
+            <StaticImage src="../images/undraw_wishes_icyp.svg" alt="tech image"/>
           </div>
         </section>
 

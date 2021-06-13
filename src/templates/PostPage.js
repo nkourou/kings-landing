@@ -2,8 +2,8 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import { FaTwitter } from "react-icons/fa";
-// import { FaTwitter, FaFacebook, FaLinkedin, FaHeart } from "react-icons/fa";
+import { FaTwitter, FaFacebook } from "react-icons/fa";
+// import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export const pageQuery = graphql`
   query PostPageQuery($id: ID!) {
@@ -130,15 +130,18 @@ const PostPage = ({
                 >
                   <FaTwitter className="mr-2" size={25} />
                 </a>
-                {/* <a className="level-item">
+                <a className="level-item"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/share.php?title=Writing+IELTS+for+Success&u=https%3A%2F%2Fieltsgeek.com%2Fblog%2F">
                   <FaFacebook className="mr-2" size={25} />
                 </a>
-                <a className="level-item">
+                {/* <a className="level-item"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/sharing/share-offsite?url=https%3A%2F%2Fieltsgeek.com%2Fblog">
                   <FaLinkedin className="mr-2" size={25} />
-                </a>
-                <div className="level-item">
-                  <FaHeart className="mr-2" size={25} />
-                </div> */}
+                </a> */}
               </div>
             </nav>
           </div>

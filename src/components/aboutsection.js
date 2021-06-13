@@ -1,9 +1,10 @@
 import React from 'react';
+import { StaticImage } from "gatsby-plugin-image";
 
 const AboutSection = () => (
   <div className="container">
     <section className="section has-text-centered">
-      <img src="../images/undraw_pizza_sharing_wxop.svg" alt="about us" />
+      <StaticImage src="../images/undraw_pizza_sharing_wxop.svg" alt="about us" />
       <h1 className="title m-6">
         We're a team of machine learning engineers, data scientists, learning science researchers and awesome teachers.
       </h1>
