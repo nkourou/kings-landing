@@ -27,7 +27,7 @@ const HelmetC = () => (
 
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="description" content={data.site.siteMetadata.description} />
         <meta name="keywords" content={data.site.siteMetadata.keywords} />
@@ -60,7 +60,7 @@ const HelmetC = () => (
           content={data.site.siteMetadata.siteLogo}
         />
 
-        <script
+        {/* <script
           type="text/javascript"
           async=""
           src="https://www.google-analytics.com/analytics.js"
@@ -73,7 +73,7 @@ const HelmetC = () => (
         <script
           async=""
           src="https://connect.facebook.net/en_US/fbevents.js"
-        ></script>
+        ></script> */}
 
         <script
           async=""

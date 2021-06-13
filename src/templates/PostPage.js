@@ -71,53 +71,9 @@ const PostPage = ({
             </p>
           </figure>
           <div className="media-content">
-            <p className="">
               <span className="title is-size-4">{post.author.name}</span>
               <br />
               {readTime} read
-              <p className="my-5 has-text-justified">
-                <RichText
-                  content={post.content.raw}
-                  renderers={{
-                    img: ({ children, alt, ...rest }) => (
-                      <img alt={alt} {...rest}>{children}</img>
-                    ),
-                    bold: ({ children }) => <strong>{children}</strong>,
-                    a: ({ children, openInNewTab, href, rel, ...rest }) => {
-                      if (href.match(/^https?:\/\/|^\/\//i)) {
-                        return (
-                          <a
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            {...rest}
-                          >
-                            {children}
-                          </a>
-                        );
-                      }
-
-                      return (
-                        <Link to={href}>
-                          <a {...rest}>{children}</a>
-                        </Link>
-                      );
-                    },
-                  }}
-                />
-              </p>
-              {post.tags.map((tag) => (
-                <div className="pr-2">
-                  <span className="tag is-light is-rounded is-size-6">
-                    #{tag}
-                  </span>
-                </div>
-              ))}
-            </p>
-            <p className="my-4 is-size-6">
-              Published on {post.date} by {post.author.name} |{" "}
-              {post.author.title}
-            </p>
           </div>
           <div className="media-right">
             <nav className="level">
@@ -146,6 +102,48 @@ const PostPage = ({
             </nav>
           </div>
         </article>
+        <p className="my-5 has-text-justified">
+            <RichText
+              content={post.content.raw}
+              renderers={{
+                img: ({ children, alt, ...rest }) => (
+                  <img alt={alt} {...rest}>{children}</img>
+                ),
+                bold: ({ children }) => <strong>{children}</strong>,
+                a: ({ children, openInNewTab, href, rel, ...rest }) => {
+                  if (href.match(/^https?:\/\/|^\/\//i)) {
+                    return (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        {...rest}
+                      >
+                        {children}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link to={href}>
+                      <a {...rest}>{children}</a>
+                    </Link>
+                  );
+                },
+              }}
+            />
+          </p>
+          {post.tags.map((tag) => (
+            <div className="pr-2">
+              <span className="tag is-light is-rounded is-size-6">
+                #{tag}
+              </span>
+            </div>
+          ))}
+        <p className="my-4 is-size-6">
+          Published on {post.date} by {post.author.name} |{" "}
+          {post.author.title}
+        </p>
         {post.relatedPosts.length > 0 && (
           <div className="tabs is-large">
             <ul>
