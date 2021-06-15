@@ -2,8 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import { FaTwitter, FaFacebook } from "react-icons/fa";
-// import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export const pageQuery = graphql`
   query PostPageQuery($id: ID!) {
@@ -82,22 +81,22 @@ const PostPage = ({
                   className="level-item"
                   target="_blank"
                   rel="noreferrer"
-                  href='https://twitter.com/intent/tweet?hashtags=ielts%2Ctutor%2Cprep&amp;original_referer=https%3A%2F%2Fieltsgeek.com%2F&amp;ref_src=twsrc%5Etfw&amp;related=twitterapi%2Ctwitter&amp;text=Great%20tips%20to%20prepare%20for%20IELTS&amp;tw_p=ieltsgeek&amp;url=https%3A%2F%2Fieltsgeek.com%2Fblog%2F&amp;via=ieltsgeek'
+                  href={'https://twitter.com/intent/tweet?hashtags=ielts%2Ctutor%2Cprep&amp;original_referer=https%3A%2F%2Fieltsgeek.com%2F&amp;ref_src=twsrc%5Etfw&amp;related=twitterapi%2Ctwitter&amp;text=Great%20tips%20to%20prepare%20for%20IELTS&amp;tw_p=ieltsgeek&amp;via=ieltsgeek&amp;url=https%3A%2F%2Fieltsgeek.com%2Fblog%2F' + post.slug}
                 >
                   <FaTwitter className="mr-2" size={25} />
                 </a>
                 <a className="level-item"
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.facebook.com/share.php?title=Writing+IELTS+for+Success&u=https%3A%2F%2Fieltsgeek.com%2Fblog%2F">
+                href={"https://www.facebook.com/share.php?title=Writing+IELTS+for+Success&u=https%3A%2F%2Fieltsgeek.com%2Fblog%2F" + post.slug}>
                   <FaFacebook className="mr-2" size={25} />
                 </a>
-                {/* <a className="level-item"
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/sharing/share-offsite?url=https%3A%2F%2Fieltsgeek.com%2Fblog">
+                <a className="level-item"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fieltsgeek.com%2Fblog%2F" + post.slug}>
                   <FaLinkedin className="mr-2" size={25} />
-                </a> */}
+                </a>
               </div>
             </nav>
           </div>

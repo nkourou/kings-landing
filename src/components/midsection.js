@@ -31,8 +31,7 @@ const Midsection = () => {
               <p>
                 This is less than the minimum required
                 for both, admission to universities and immigration to countries
-                like Canada <Emoji emoji="🇨🇦" />, Australia <Emoji emoji="🇦🇺" />
-                , etc.
+                like Canada, Australia, etc.
               </p>
             </div>
           </div>
