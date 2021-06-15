@@ -36,14 +36,14 @@ const Cookie = () => {
             </Link>
             .
         </p>
-        <div className="is-hidden-mobile">
+        {/* <div className="is-hidden-mobile">
           <p>
             IELTS is a registered trademark of University of Cambridge ESOL, the British Council, and IDP Education Australia.
           </p>
           <p>
           <strong>ieltsgeek.com</strong> is not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia. All other trademarks on this website are the property of their respective owners.
           </p>
-        </div>
+        </div> */}
         </div>
         <div className="cc-compliance">
           <button
@@ -51,7 +51,7 @@ const Cookie = () => {
             className="button is-warning has-text-weight-bold"
             onClick={enableCookies}
           >
-          <Emoji emoji='🍪' className="mr-2" /> Gotcha!
+          <Emoji emoji='🍪' /> <span className="pl-2">Gotcha!</span>
           </button>
         </div>
       </div>

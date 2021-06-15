@@ -7,6 +7,12 @@ const PrivacySection = () => (
         <div className="column is-8">
           <h1 className="title is-size-1">Privacy Policy</h1>
           <h2 className="subtitle">Last Update: July 27, 2021</h2>
+          <p>
+            IELTS is a registered trademark of University of Cambridge ESOL, the British Council, and IDP Education Australia.
+          </p>
+          <p>
+          <strong>ieltsgeek.com</strong> is not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia. All other trademarks on this website are the property of their respective owners.
+          </p>
           <p className="mb-6">
             By using our website you consent to the collection, processing and use of data as described below. Our website can be visited without registration. This data such as pages called or name of the retrieved file, date and time are stored on the server for statistical purposes, without this data are directly related to your person. Personal data, in particular name, address or e-mail address are collected as far as possible on a voluntary basis. Without your consent, the data will not be passed on to third parties.
           </p>
