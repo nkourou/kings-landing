@@ -1,21 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: 'IELTSgeek',
+    title: 'WuruZeka',
     siteTitleAlt: 'AI tutor for improving IELTS scores', // Alternative Site title for SEO
-    siteTitleShort: 'ieltsgeek', // short_name for manifest
+    siteTitleShort: 'wuruzeka', // short_name for manifest
     pathPrefix: '/',
     siteImg: 'https://github.com/nkourou/nkourou.github.io/raw/main/imgs/open-graph.jpg',
-    siteLogo: '../images/bulma-logo.png',
+    siteLogo: '../images/logo.svg',
     author: 'Ayush Singh',
     minibio: 'The AI based app for people who want to identify their weakness and improve them. Because rote memorization & passive learning has failed them!',
     description: 'AI tutor for improving IELTS scores',
-    keywords: `Artifical Intelligence, Personalized learning, IELTS, IELTS coaching, IELTS prep, NLP, Natural Language Processing, Speech recognition`,
-    twitter: 'https://twitter.com/ieltsgeek',
+    keywords: `Artifical Intelligence, Personalized learning, IELTS, IELTS coaching, IELTS prep, English, NLP, Natural Language Processing, Speech recognition`,
+    twitter: 'https://twitter.com/wuruzeka',
+    instagram: "https://instagram.com/wuruzeka",
     fbAppID: '',
-    github: `https://github.com/ieltsgeek`,
-    medium: 'https://medium.com/@ieltsgeek',
-    siteUrl: process.env.ROOT_URL || 'https://ieltsgeek.com',
-    appUrl: process.env.APP_URL || "https://app.ieltsgeek.com"
+    medium: 'https://medium.com/@wuruzeka',
+    siteUrl: process.env.ROOT_URL || 'https://wuruzeka.com',
+    appUrl: process.env.APP_URL || "https://app.wuruzeka.com"
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "nblkjhb",
+        trackingId: process.env.WZ_GA_ID,
       },
     },
     "gatsby-plugin-react-helmet",
@@ -59,7 +59,7 @@ module.exports = {
       options: {
         typeName: 'GraphCMS',
         fieldName: 'gcms',
-        url: process.env.GRAPH_CMS_API
+        url: process.env.WZ_GRAPH_CMS_API
       }
     }
   ],

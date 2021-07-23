@@ -39,7 +39,7 @@ const HelmetC = () => (
 
         {/* OpenGraph tags */}
         <meta property="og:type" content="product" />
-        <meta property="og:title" content="IELTSgeek" />
+        <meta property="og:title" content="WuruZeka" />
         <meta
           property="og:description"
           content={data.site.siteMetadata.description}
@@ -50,7 +50,7 @@ const HelmetC = () => (
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content={data.site.siteMetadata.twitter} />
-        <meta name="twitter:title" content="IELTSgeek" />
+        <meta name="twitter:title" content="WuruZeka" />
         <meta
           name="twitter:description"
           content={data.site.siteMetadata.description}
@@ -60,12 +60,12 @@ const HelmetC = () => (
           content={data.site.siteMetadata.siteLogo}
         />
 
-        {/* <script
+        <script
           type="text/javascript"
           async=""
           src="https://www.google-analytics.com/analytics.js"
         ></script>
-        <script
+        {/* <script
           type="text/javascript"
           async=""
           src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
@@ -75,10 +75,10 @@ const HelmetC = () => (
           src="https://connect.facebook.net/en_US/fbevents.js"
         ></script> */}
 
-        <script
+        {/* <script
           async=""
-          // src="https://www.googletagmanager.com/gtag/js?id=UA-125842727-5"
-        ></script>
+          src="https://www.googletagmanager.com/gtag/js?id=G-4XHC55FZNZ"
+        ></script> */}
 
         {/* Facebook Pixel Code */}
 

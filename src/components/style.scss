@@ -95,11 +95,6 @@ audio, canvas, embed, iframe, img object, svg, video {
 	color: rgba(0,0,0,0.7);
 }
 
-.wrap-speaking {
-	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
-	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-	color: snow; 
-}
 
 .speaking-text {
 	background: $speaking-color;
@@ -129,6 +124,11 @@ audio, canvas, embed, iframe, img object, svg, video {
 	-webkit-text-fill-color: transparent;
 }
 
+.wrap-speaking {
+	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	color: snow; 
+}
 .wrap-listening {
 	border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%; 
 	background: rgb(215, 246, 112);

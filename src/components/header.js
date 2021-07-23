@@ -21,42 +21,57 @@ const Header = () => {
         });
       }
     };
-    document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       // clean up the event handler when the component unmounts
-      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, [state.scrolled]);
 
   return (
-  <section
-    id="headers"
-    data-section-id="1"
-    data-category="headers"
-    className="section is-background-contain is-background-no-repeat"
-  >
-      <button className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${state.scrolled? '': 'is-hidden'}`}> Try demo </button>
+    <section
+      id="headers"
+      data-section-id="1"
+      data-category="headers"
+      className="section is-background-contain is-background-no-repeat"
+    >
+      <a
+        className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${
+          state.scrolled ? "" : "is-hidden"
+          }`}
+        href="https://app.wuruzeka.com"
+      >
+        Try demo
+      </a>
 
       <div className="mx-auto has-text-centered">
         <h1 className="title is-size-1-desktop text-5xl is-size-2-touch">
           <span data-config-id="header1 is-inline-block">Improve your </span>
-          <span className="block"><br/></span>
+          <span className="block">
+            <br />
+          </span>
           <span
             className="has-text-danger is-inline-block pr-2"
             data-config-id="header2"
           >
             IELTS
           </span>
-          <span className="block is-hidden-desktop"><br/></span>
+          <span className="block is-hidden-desktop">
+            <br />
+          </span>
           <TypedText />
-          <span className="block is-hidden-desktop"><br/></span>
-          <span data-config-id="header4" className="ml-2">scores</span>
+          <span className="block is-hidden-desktop">
+            <br />
+          </span>
+          <span data-config-id="header4" className="ml-2">
+            scores
+          </span>
         </h1>
         <h2
           className="subtitle is-size-4-desktop is-size-5-touch"
           data-config-id="description"
         >
-          Let AI find gaps and improve with targeted learning!
+          Let AI fill your gaps in english with targeted learning!
         </h2>
         <div className="buttons is-centered">
           <a
@@ -65,7 +80,7 @@ const Header = () => {
           is-primary is-rounded is-size-4-desktop
           has-text-weight-bold
           "
-            href="https://app.ieltsgeek.com"
+            href="https://app.wuruzeka.com"
             data-config-id="primary-hero"
           >
             Try now for free
@@ -82,13 +97,10 @@ const Header = () => {
       <div className="mx-auto is-relative is-centered" data-sal="slide-up">
         <img src={patternImg} alt="pattern background" />
         <figure className="header-image image">
-          <img
-            src={dashboardImg}
-            alt="Gif of platform"
-          />
+          <img src={dashboardImg} alt="Gif of platform" />
         </figure>
       </div>
-  </section>
+    </section>
   );
 };
 
@@ -161,10 +173,5 @@ const TypedText = () => {
     };
   }, []);
 
-  return (
-    <span
-      className="txt-rotate pl-2 pr-4 is-inline-block"
-      ref={el}
-    />
-  );
+  return <span className="txt-rotate pl-2 pr-4 is-inline-block" ref={el} />;
 };

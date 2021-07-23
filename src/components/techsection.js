@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegCheckCircle } from 'react-icons/fa';
+import { FaRegCheckCircle } from "react-icons/fa";
 import { StaticImage } from "gatsby-plugin-image";
 
 const TechSection = () => {
@@ -18,7 +18,10 @@ const TechSection = () => {
                 for a student based on their specific needs.
               </h2>
             </div>
-            <StaticImage src="../images/undraw_wishes_icyp.svg" alt="tech image"/>
+            <StaticImage
+              src="../images/undraw_wishes_icyp.svg"
+              alt="tech image"
+            />
           </div>
         </section>
 
@@ -29,36 +32,37 @@ const TechSection = () => {
             aspect of our decision making and measure using real world data. We
             are data-driven in everything we do!
           </h2>
-          
+
           <ul className="mt-5">
-            We use a combination of following disciplines of Machine learning (ML):
+            We use a combination of following disciplines of Machine learning
+            (ML):
             <li>
               <p>
-                <FaRegCheckCircle className="mr-2 has-text-primary"/>
+                <FaRegCheckCircle className="mr-2 has-text-primary" />
                 Natural language processing (NLP) to read your written tests and
                 generate the right content for you
               </p>
             </li>
             <li>
               <p>
-                <FaRegCheckCircle className="mr-2 has-text-primary"/>
+                <FaRegCheckCircle className="mr-2 has-text-primary" />
                 Automated speech recognition (ASR) to listen and analyse your
                 speech to identify areas of improvement
               </p>
             </li>
             <li>
               <p>
-                <FaRegCheckCircle className="mr-2 has-text-primary"/>
+                <FaRegCheckCircle className="mr-2 has-text-primary" />
                 Recommendation systems just like e-commerce sites but instead to
                 suggest the right set of questions to you
               </p>
             </li>
             <li>
               <p>
-                <FaRegCheckCircle className="mr-2 has-text-primary"/>
-                Learning science to make sure you are learning with every session
-                and to adaptively help you revise content that you might be ready
-                to forget e.g. vocabulary
+                <FaRegCheckCircle className="mr-2 has-text-primary" />
+                Learning science to make sure you are learning with every
+                session and to adaptively help you revise content that you might
+                be ready to forget e.g. vocabulary
               </p>
             </li>
           </ul>
@@ -174,8 +178,8 @@ const TechSection = () => {
 
         <section className="section has-text-centered">
           <h1 className="writing-text is-size-1">
-            Thousands of exercise modules, <br/> you only do the ones that improve
-            you!
+            Thousands of exercise modules, <br /> you only do the ones that
+            improve you!
           </h1>
           <a
             className="
@@ -183,7 +187,7 @@ const TechSection = () => {
           is-primary is-rounded is-large
           has-text-weight-bold
           "
-            href="https://app.ieltsgeek.com"
+            href="https://app.wuruzeka.com"
           >
             Try now for free
           </a>

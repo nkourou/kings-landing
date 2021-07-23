@@ -37,7 +37,13 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Free of cost question-answering with IELTS certified teachers
+                        Daily classes and a dedicated IELTS expert assigned to you
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <FaRegCheckCircle className="mr-2 has-text-success"/>
+                        Free of cost 24x7 question-answering with IELTS experts
                       </p>
                     </li>
                     <li>
@@ -55,22 +61,27 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Pay minimal for further evaluations if needed
+                        Pay minimal for further evaluations only if needed
                       </p>
                     </li>
-                    <li>
+                    {/* <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
                         Free trial for a week to use at your hearts content <Emoji emoji='🎉'/>
                       </p>
-                    </li>
+                    </li> */}
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Get additional cashback by uploading your official IELTS results
+                        Get 20% cashback by uploading your official IELTS results
                       </p>
                     </li>
                   </ul>
+                  <article class="message is-warning">
+                    <div class="message-body">
+                      Free trial for a week to use at your hearts content <Emoji emoji='🎉'/>
+                    </div>
+                  </article>
                   <button className="button is-fullwidth is-success is-large is-outlined">
                     Sign up now to start free
                   </button>

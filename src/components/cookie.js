@@ -41,7 +41,7 @@ const Cookie = () => {
             IELTS is a registered trademark of University of Cambridge ESOL, the British Council, and IDP Education Australia.
           </p>
           <p>
-          <strong>ieltsgeek.com</strong> is not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia. All other trademarks on this website are the property of their respective owners.
+          <strong>wuruzeka.com</strong> is not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia. All other trademarks on this website are the property of their respective owners.
           </p>
         </div> */}
         </div>
