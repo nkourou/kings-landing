@@ -5,7 +5,7 @@ module.exports = {
     siteTitleShort: 'wuruzeka', // short_name for manifest
     pathPrefix: '/',
     siteImg: 'https://github.com/nkourou/nkourou.github.io/raw/main/imgs/open-graph.jpg',
-    siteLogo: '../images/logo.svg',
+    siteLogo: '../images/non_text_logo.png',
     author: 'Ayush Singh',
     minibio: 'The AI based app for people who want to identify their weakness and improve them. Because rote memorization & passive learning has failed them!',
     description: 'AI tutor for improving IELTS scores',
@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/logo.png",
+        icon: "src/images/non_text_logo.png",
       },
     },
     "gatsby-plugin-sharp",
