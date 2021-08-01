@@ -39,7 +39,7 @@ const HelmetC = () => (
 
         {/* OpenGraph tags */}
         <meta property="og:type" content="product" />
-        <meta property="og:title" content="WuruZeka" />
+        <meta property="og:title" content={data.site.siteMetadata.title} />
         <meta
           property="og:description"
           content={data.site.siteMetadata.description}
@@ -48,9 +48,8 @@ const HelmetC = () => (
         <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
         <meta property="fb:app_id" content={data.site.siteMetadata.fbAppID} />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={data.site.siteMetadata.twitter} />
-        <meta name="twitter:title" content="WuruZeka" />
+        <meta name="twitter:creator" content={data.site.siteMetadata.author} />
+        <meta name="twitter:title" content={data.site.siteMetadata.title} />
         <meta
           name="twitter:description"
           content={data.site.siteMetadata.description}
@@ -59,6 +58,8 @@ const HelmetC = () => (
           name="twitter:image:src"
           content={data.site.siteMetadata.siteLogo}
         />
+        <meta name="twitter:card" content="summary_large_image" />
+
 
         <script
           type="text/javascript"

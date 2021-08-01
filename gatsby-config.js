@@ -1,6 +1,8 @@
+// https://github.com/alxshelepenok/gatsby-starter-lumen/blob/master/gatsby-config.js
+
 module.exports = {
   siteMetadata: {
-    title: 'WuruZeka',
+    title: 'Wuru Zeka',
     siteTitleAlt: 'AI tutor for improving IELTS scores', // Alternative Site title for SEO
     siteTitleShort: 'wuruzeka', // short_name for manifest
     pathPrefix: '/',
@@ -22,10 +24,20 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-scroll-reveal",
+    // "gatsby-plugin-optimize-svgs",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.WZ_GA_ID,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          process.env.WZ_GA_ID, // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          anonymize_ip: true,
+        },
       },
     },
     "gatsby-plugin-react-helmet",

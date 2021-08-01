@@ -59,3 +59,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// loginWithRedirect(): void {
+//     this.auth.loginWithRedirect({
+//       screen_hint: 'signup',
+//       display: 'popup'
+//     });
+//   }
