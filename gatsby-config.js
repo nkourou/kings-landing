@@ -14,17 +14,18 @@ module.exports = {
     keywords: `Artifical Intelligence, Personalized learning, IELTS, IELTS coaching, IELTS prep, English, NLP, Natural Language Processing, Speech recognition`,
     twitter: 'https://twitter.com/wuruzeka',
     instagram: "https://instagram.com/wuruzeka",
-    fbAppID: '',
+    fbAppID: '349992816762548',
+    mixpanel: '6b2f75494a5067e60cac888cd53760f6',
     medium: 'https://medium.com/@wuruzeka',
     siteUrl: process.env.ROOT_URL || 'https://wuruzeka.com',
-    appUrl: process.env.APP_URL || "https://app.wuruzeka.com"
+    appUrl: process.env.APP_URL || "https://app.wuruzeka.com",
+    organization: "Wuru Zeka Inc."
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-scroll-reveal",
-    // "gatsby-plugin-optimize-svgs",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

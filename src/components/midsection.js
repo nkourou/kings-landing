@@ -236,8 +236,9 @@ const Midsection = () => {
                   1. Diagnosis
                 </h1>
                 <p className="subtitle is-5" data-config-id="desc1">
-                  We leverage bleeding edge advancements in learning science as
-                  well as behavorial psychology to build short modules.
+                  We use the latest in natural language processing (NLP) and
+                  automated speech recognition (ASR) to get even deeper insights
+                  into your skills level.
                 </p>
               </div>
             </div>
@@ -250,9 +251,8 @@ const Midsection = () => {
                   2. Treatment
                 </h1>
                 <p className="subtitle is-5" data-config-id="desc2">
-                  We use the latest in natural language processing (NLP) and
-                  automated speech recognition (ASR) to get even deeper insights
-                  into your skills level.
+                  We leverage bleeding edge advancements in learning science as
+                  well as behavorial psychology to build short modules that you can finish in less than 20 minutes per day.
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ const Midsection = () => {
                   3. Re-evaluation
                 </h1>
                 <p className="subtitle is-5" data-config-id="desc3">
-                  Our A.I. and IELTS certified teachers work together to assess the effect of treatment in step 2 and go back to step 1 with new set of exercises that help you take it to the next level.
+                  Our A.I. and IELTS certified teachers work together to assess the effect of treatment in step 2 and go back to step 1 with new set of exercises that help you take your skills to the next level.
                 </p>
               </div>
             </div>
@@ -291,7 +291,7 @@ const Midsection = () => {
                     <div className="media-content">
                       <p className="title">Writing</p>
                       <p className="subtitle is-6">
-                        Most difficult of all task to get a high score on
+                        Most difficult to get a high score on
                       </p>
                     </div>
                   </div>
