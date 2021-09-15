@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.scss";
-import fixingBugsSvg from "../images/undraw_fixing_bugs_w7gi.svg";
-import masterPlanSvg from "../images/undraw_Master_plan_re_jvit.svg";
 import Emoji from "./emoji";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -61,10 +59,10 @@ const Midsection = () => {
                 src="../images/undraw_doctors_hwty.svg"
               /> */}
               <h3 className="title is-spaced is-size-3 has-text-centered">
-                We diagnose and fix it
+                We diagnose and fix it <Emoji emoji="🧙🏼‍♀️" />
               </h3>
               <p className="subtitle is-size-4">
-                <Emoji emoji="🤖" />+ <Emoji emoji="🧙🏼‍♀️" />
+                Human + Artificial
                 intelligence will not only surface & fix your weaknesses, but
                 also reinforce your strengths.
               </p>
@@ -178,11 +176,11 @@ const Midsection = () => {
           </div>
           <div className="column is-6 is-hidden-touch" data-sal="slide-left">
             <div className="p-6">
-              <img
+              <StaticImage
                 className="
 						  is-relative is-radius is-fullwidth is-object-cover is-radius
 						"
-                src={fixingBugsSvg}
+                src="../images/undraw_fixing_bugs_w7gi.svg"
                 alt=""
                 data-config-id="01_image"
               />
@@ -213,8 +211,8 @@ const Midsection = () => {
         <div className="columns py-3 is-centered is-vcentered">
           <div className="column is-6">
             <div className="p-6">
-              <img
-                src={masterPlanSvg}
+              <StaticImage
+                src="../images/undraw_Master_plan_re_jvit.svg"
                 alt="learning as a loop"
                 data-config-id="01_image"
                 data-sal="slide-right"

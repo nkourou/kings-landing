@@ -14,6 +14,7 @@ const pageQuery = graphql`
           picture
         }
         author {
+          name
           picture {
             url
           }
@@ -35,7 +36,10 @@ const Blog = () => {
   } = useStaticQuery(pageQuery);
 
   return (
-    <PageLayout pageTitle="Blog" pageLink="blog">
+    <PageLayout
+      pageTitle="Blog"
+      pageLink="blog"
+    >
       <div className="columns is-multiline mx-3">
         {posts.map(({ slug, ...post }) => (
           <div className="column is-4">

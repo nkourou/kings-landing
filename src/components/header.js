@@ -85,13 +85,13 @@ const Header = () => {
           >
             Try now for free
           </a>
-          <a
+          {/* <a
             className="button is-danger is-rounded is-light is-size-4-desktop is-hidden-mobile"
             href="https://ieltsregistration.britishcouncil.org/test-chooser"
             data-config-id="secondary-hero"
           >
             Book IELTS
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="mx-auto is-relative is-centered" data-sal="slide-up">

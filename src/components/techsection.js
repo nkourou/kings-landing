@@ -91,12 +91,12 @@ const TechSection = () => {
           <h1 className="is-size-2">
             <span className="writing-text">Writing</span>
           </h1>
-          <h2>
+          <div className="content">
             Transferring your thoughts in a structured way isn't enough. One
             needs to show use of complex grammar, lexical diversity and hundred
             other things. Our AI assesses your writing style and teaches you to
             break bad habits and build new ones.
-          </h2>
+          </div>
           {/* <form>
             <audio></audio>
             <div className="field">
@@ -134,6 +134,13 @@ const TechSection = () => {
             See if you can extract information from this audio and answer the
             following question:
           </h3>
+          <div className="content">
+            We train your ear to listen to the types of information
+            asked in IELTS tests. Different accents, speed, pitch and
+            cultural dialects are some of the ways listening tests
+            will test your ability. e.g.{" "}
+            <em>know what corner of 5th and 8th means ?</em>
+          </div>
           {/* <form>
             <audio></audio>
             <div className="field">

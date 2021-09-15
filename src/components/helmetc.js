@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import SchemaOrg from "./SchemaOrg";
 
-const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
+const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) => (
   <StaticQuery
     query={graphql`
       query helmetQuery {
@@ -19,22 +19,26 @@ const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             twitter
             fbAppID
             mixpanel
+            organization {
+              name
+              url
+              logo
+            }
           }
         }
       }
     `}
     render={(data) => {
-      const title = postMeta.title || data.site.siteMetadata.title;
-      const description = postMeta.description || data.site.siteMetadata.description;
-      const image = postImage ? `${seo.siteUrl}${postImage}` : data.site.siteMetadata.siteImg;
-      const url = postMeta.slug
-        ? `${data.site.siteMetadata.siteUrl}/blog/${postMeta.slug}/`
+      const siteTitle = title || data.site.siteMetadata.title;
+      const description = excerpt || data.site.siteMetadata.description;
+      const siteImage = image ? `${data.site.siteMetadata.siteUrl}${image}` : data.site.siteMetadata.siteImg;
+      const url = slug ? `${data.site.siteMetadata.siteUrl}/blog/${slug}/`
         : data.site.siteMetadata.siteUrl;
-      const datePublished = isBlogPost ? postMeta.datePublished : false;
-
+      const datePublished = isBlogPost ? date : false;
+      const author  = authorName || data.site.siteMetadata.author;
       return (
-        <React.Fragment>
-          <Helmet>
+        <React.Fragment key={slug}>
+          <Helmet key="helmet">
             <html lang="en" />
             <meta charset="UTF-8" />
 
@@ -44,41 +48,41 @@ const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             />
             <meta
               name="description"
-              content={data.site.siteMetadata.description}
+              content={description}
             />
             <meta name="keywords" content={data.site.siteMetadata.keywords} />
-            <title>{data.site.siteMetadata.title}</title>
-            <meta name="image" content={data.site.siteMetadata.siteImg} />
+            <title>{siteTitle}</title>
+            <meta name="image" content={siteImage} />
 
             <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
             {/* Google / Search Engine Meta Tags */}
-            <meta itemprop="name" content={data.site.siteMetadata.author} />
-            <meta itemprop="image" content={data.site.siteMetadata.siteLogo} />
+            <meta itemprop="name" content={author} />
+            <meta itemprop="image" content={siteImage} />
 
             {/* OpenGraph tags */}
             <meta property="og:type" content="product" />
-            <meta property="og:title" content={data.site.siteMetadata.title} />
+            <meta property="og:title" content={siteTitle} />
             <meta
               property="og:description"
-              content={data.site.siteMetadata.description}
+              content={description}
             />
-            <meta property="og:image" content={data.site.siteMetadata.siteLogo} />
+            <meta property="og:image" content={siteImage} />
             <meta property="og:locale" content="en_US" />
-            <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
+            <meta property="og:url" content={url} />
             <meta property="fb:app_id" content={data.site.siteMetadata.fbAppID} />
 
             <meta
               name="twitter:creator"
-              content={data.site.siteMetadata.author}
+              content={author}
             />
-            <meta name="twitter:title" content={data.site.siteMetadata.title} />
+            <meta name="twitter:title" content={siteTitle} />
             <meta
               name="twitter:description"
-              content={data.site.siteMetadata.description}
+              content={description}
             />
             <meta
               name="twitter:image:src"
-              content={data.site.siteMetadata.siteLogo}
+              content={siteImage}
             />
             <meta name="twitter:card" content="summary_large_image" />
 
@@ -87,13 +91,13 @@ const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
               async=""
               src="https://www.google-analytics.com/analytics.js"
             ></script>
-            <script
+            {/* <script
               type="text/javascript"
               async=""
               src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
             >
               mixpanel.init(data.site.siteMetadata.mixpanel);
-            </script>
+            </script> */}
 
             {/* <script
           async=""
@@ -107,7 +111,7 @@ const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             ></script>
 
             {/*  Hotjar Tracking Code */}
-            <script
+            {/* <script
               async=""
             // src="https://static.hotjar.com/c/hotjar-2326395.js?sv=6"
             ></script>
@@ -115,17 +119,18 @@ const HelmetC = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
               async=""
               // src="https://script.hotjar.com/modules.734bd4b678d25642f35b.js"
               charset="utf-8"
-            ></script>
+            ></script> */}
           </Helmet>
           <SchemaOrg
+             key="schema"
             isBlogPost={isBlogPost}
             url={url}
-            title={title}
+            title={siteTitle}
             image={image}
             description={description}
             datePublished={datePublished}
-            siteUrl={data.site.siteMetadata.siteUrl}
-            author={data.site.siteMetadata.author}
+            canonicalUrl={data.site.siteMetadata.siteUrl}
+            authorName={author}
             organization={data.site.siteMetadata.organization}
             defaultTitle={data.site.siteMetadata.title}
           />

@@ -13,6 +13,7 @@ export const pageQuery = graphql`
         slug
         date
         tags
+        excerpt
         author {
           biography
           name
@@ -56,7 +57,15 @@ const PostPage = ({
       ? `${Math.floor(readTime * 60)} seconds`
       : `${Math.floor(readTime)} min`;
   return (
-    <PageLayout pageTitle="Blog" pageLink="blog">
+    <PageLayout
+      pageTitle={post.title}
+      pageLink="blog"
+      excerpt={post.excerpt}
+      image={post.coverImage.url}
+      slug={post.slug}
+      date={post.date}
+      authorName={post.author.name}
+    >
       <div className="has-text-centered">
         <h1 className="title is-size-1">{post.title}</h1>
         <h3 className="subtitle">{post.excerpt}</h3>

@@ -7,14 +7,22 @@ import Navbar from "./navbar";
 import Cookie from "./cookie";
 import { Link } from "gatsby";
 
-const PageLayout = ({ pageTitle, pageLink, children }) => (
+const PageLayout = ({ pageTitle, pageLink, excerpt, image, slug, date, authorName, children }) => (
   <>
-    <HelmetC />
+    <HelmetC
+      isBlogPost={true}
+      title={pageTitle}
+      excerpt={excerpt}
+      image={image}
+      slug={slug}
+      date={date}
+      authorName={authorName}
+    />
     <Navbar />
     <section className="mb-6 hero is-warning">
       <div className="hero-body">
         <h1 className="title">
-          <Link to={`/${pageLink}`}>WuruZeka | {pageTitle}</Link>
+          <Link to={`/${pageLink}`}>WuruZeka | Blog</Link>
         </h1>
         <h2 className="subtitle">The AI tutor app for IELTS</h2>
       </div>

@@ -3,11 +3,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Wuru Zeka',
-    siteTitleAlt: 'AI tutor for improving IELTS scores', // Alternative Site title for SEO
     siteTitleShort: 'wuruzeka', // short_name for manifest
     pathPrefix: '/',
     siteImg: 'https://github.com/nkourou/nkourou.github.io/raw/main/imgs/open-graph.jpg',
-    siteLogo: '../images/non_text_logo.png',
+    siteLogo: 'https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg',
     author: 'Ayush Singh',
     minibio: 'The AI based app for people who want to identify their weakness and improve them. Because rote memorization & passive learning has failed them!',
     description: 'AI tutor for improving IELTS scores',
@@ -19,7 +18,7 @@ module.exports = {
     medium: 'https://medium.com/@wuruzeka',
     siteUrl: process.env.ROOT_URL || 'https://wuruzeka.com',
     appUrl: process.env.APP_URL || "https://app.wuruzeka.com",
-    organization: "Wuru Zeka Inc."
+    organization: { name: "Wuru Zeka Inc.", logo: "https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg", url: "https://wuruzeka.com" }
   },
   plugins: [
     "gatsby-plugin-sass",
