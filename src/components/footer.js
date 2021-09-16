@@ -108,7 +108,7 @@ const Footer = () => (
                         <a
                           href="mailto:support@wuruzeka.com"
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                         >
                           <FaUser className="mr-2" />
                           Mail us
@@ -118,7 +118,7 @@ const Footer = () => (
                         <a
                           href={data.site.siteMetadata.facebook}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                         >
                           <FaFacebook className="mr-2" />
                           Facebook
@@ -128,7 +128,7 @@ const Footer = () => (
                         <a
                           href={data.site.siteMetadata.instagram}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                         >
                           <FaInstagram className="mr-2" />
                           Instagram
@@ -138,7 +138,7 @@ const Footer = () => (
                         <a
                           href={data.site.siteMetadata.twitter}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                         >
                           <FaTwitter className="mr-2" />
                           Twitter
@@ -148,7 +148,7 @@ const Footer = () => (
                         <a
                           href={data.site.siteMetadata.medium}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                         >
                           <FaMedium className="mr-2" />
                           Medium

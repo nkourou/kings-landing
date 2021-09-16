@@ -8,7 +8,6 @@ const pageQuery = graphql`
       posts(orderBy: publishedAt_DESC) {
         date
         excerpt
-        date
         publishedBy {
           name
           picture
