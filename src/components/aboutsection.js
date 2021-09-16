@@ -28,6 +28,9 @@ const AboutSection = () => (
         technology to general audience who can use our AI to improve themselves
         as well!
       </p>
+      <blockquote>
+        The term <i>Wuru Zeka</i> stems from two languages. Wuru means Artificial in an indigenous African language and Zeka means Intelligence in Turkish. Together they form Artifical Intelligence which is the core technology behind our success.
+      </blockquote>
     </section>
   </div>
 );

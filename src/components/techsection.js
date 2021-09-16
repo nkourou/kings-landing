@@ -130,10 +130,10 @@ const TechSection = () => {
           <h1 className="is-size-2">
             <span className="listening-text">Listening</span>
           </h1>
-          <h3>
+          {/* <h3>
             See if you can extract information from this audio and answer the
             following question:
-          </h3>
+          </h3> */}
           <div className="content">
             We train your ear to listen to the types of information
             asked in IELTS tests. Different accents, speed, pitch and
