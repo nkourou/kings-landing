@@ -14,6 +14,7 @@ const Footer = () => (
         site {
           siteMetadata {
             twitter
+            instagram
             medium
           }
         }
