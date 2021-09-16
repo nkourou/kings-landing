@@ -94,18 +94,16 @@ module.exports = {
                 }
               }
             }
-          }
-          {
             gcms {
               posts {
                 slug
                 updatedAt
               }
             }
-          }
-          site {
-            siteMetadata {
-              siteUrl
+            site {
+              siteMetadata {
+                siteUrl
+              }
             }
           }
         `,
@@ -113,18 +111,17 @@ module.exports = {
         resolvePages: ({
           allSitePage: { edges: allPages },
           gcms: { posts: allGcmsPosts },
-          site: { siteMetadata: siteUrl }
+          site: { siteMetadata: metadata }
         }) => {
           const wpNodeMap = allGcmsPosts.reduce((acc, node) => {
             const { slug } = node
-            acc[slug] = node
+            acc[`/blog/${slug}`] = node
 
             return acc
           }, {})
-
-          return allPages.map(page => {
-            const path = siteUrl + page.node.path
-            return { path, ...wpNodeMap[`/blog/${page.node.path}`] }
+          return allPages.map(edge => {
+            const path = metadata.siteUrl + edge.node.path
+            return { path, ...wpNodeMap[edge.node.path] }
           })
         },
         serialize: ({ path, updatedAt }) => {
