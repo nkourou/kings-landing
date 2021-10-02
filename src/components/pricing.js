@@ -119,8 +119,8 @@ const Pricing = () => {
                         <div className="control">
                           <button className={`button is-fullwidth is-success is-large  is-rounded ${serverResponse === "loading" ? "is-loading": ""}`} type="submit" disabled={serverResponse === 'OK'}>
                           {serverResponse === "OK" ?
-                            <span>Click here to get invited!</span> :
-                            <span>Tada <Emoji emoji='🎉' /></span>
+                            <span>Tada <Emoji emoji='🎉' /></span> :
+                            <span>Click here to get invited!</span>
                           }
                         </button>
                         </div>
