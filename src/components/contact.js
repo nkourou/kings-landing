@@ -4,7 +4,7 @@ const Contact = () => (
     <h1 className="title">Contact</h1>
     <p>
       <p className="mb-5">
-        Little Lights Studio GmbH <br />
+        Kwitanga Education Group <br />
         27-1080 Burrard St. <br />
         Vancouver, BC, Canada 🇨🇦
       </p>
