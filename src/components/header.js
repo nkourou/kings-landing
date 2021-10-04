@@ -35,14 +35,14 @@ const Header = () => {
       data-category="headers"
       className="section is-background-contain is-background-no-repeat"
     >
-      <a
+      {/* <a
         className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${
           state.scrolled ? "" : "is-hidden"
           }`}
         href="https://app.wuruzeka.com"
       >
         Try demo
-      </a>
+      </a> */}
 
       <div className="mx-auto has-text-centered">
         <h1 className="title is-size-1-desktop text-5xl is-size-2-touch">
@@ -73,7 +73,7 @@ const Header = () => {
         >
           Let AI fill your gaps in english with targeted learning!
         </h2>
-        <div className="buttons is-centered">
+        {/* <div className="buttons is-centered">
           <a
             className="
           button
@@ -85,6 +85,7 @@ const Header = () => {
           >
             Try now for free
           </a>
+        </div> */}
           {/* <a
             className="button is-danger is-rounded is-light is-size-4-desktop is-hidden-mobile"
             href="https://ieltsregistration.britishcouncil.org/test-chooser"
@@ -92,7 +93,6 @@ const Header = () => {
           >
             Book IELTS
           </a> */}
-        </div>
       </div>
       <div className="mx-auto is-relative is-centered" data-sal="slide-up">
         <img src={patternImg} alt="pattern background" />
