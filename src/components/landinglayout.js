@@ -6,6 +6,7 @@ import Footer from './footer';
 import Navbar from './navbar';
 import Cookie from './cookie';
 import Pricing from './pricing';
+import HowItWorks from './howItWorks';
 
 const Layout = ({ children }) => (
 	<div>
@@ -13,6 +14,7 @@ const Layout = ({ children }) => (
 		<Navbar />
 		{ children }
 		<Pricing />
+		<HowItWorks />
 		<Cookie />
 		<Footer />
 	</div>
