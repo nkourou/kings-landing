@@ -1,41 +1,41 @@
 import React, { useState } from 'react';
-import { StaticImage } from "gatsby-plugin-image";
+import logoImg from "../images/logo_light.png";
 
 import { Link } from 'gatsby';
 
 const Navbar = () => {
 	const [isShowMenu, setState] = useState(false);
-	const [value, setValue] = React.useState({})
-	const [serverResponse, setServerResponse] = React.useState(``)
-	// Listen to form changes and save them.
-	function handleChange(e) {
-	  value[e.target.id] = e.target.value
-	  setServerResponse(``)
-	  setValue({ ...value })
-	}
-	// When the form is submitted, send the form values
-	// to our function for processing.
-	async function onSubmit(e) {
-		setServerResponse('loading')
-	  e.preventDefault()
-	  const response = await window
-		.fetch(`/api/signup-form`, {
-		  method: `POST`,
-		  headers: {
-			"content-type": "application/json",
-		  },
-		  body: JSON.stringify(value),
-		})
-		.then(res => res.json())
-	  setServerResponse(response)
-	}
+	// const [value, setValue] = React.useState({})
+	// const [serverResponse, setServerResponse] = React.useState(``)
+	// // Listen to form changes and save them.
+	// function handleChange(e) {
+	//   value[e.target.id] = e.target.value
+	//   setServerResponse(``)
+	//   setValue({ ...value })
+	// }
+	// // When the form is submitted, send the form values
+	// // to our function for processing.
+	// async function onSubmit(e) {
+	// 	setServerResponse('loading')
+	//   e.preventDefault()
+	//   const response = await window
+	// 	.fetch(`/api/signup-form`, {
+	// 	  method: `POST`,
+	// 	  headers: {
+	// 		"content-type": "application/json",
+	// 	  },
+	// 	  body: JSON.stringify(value),
+	// 	})
+	// 	.then(res => res.json())
+	//   setServerResponse(response)
+	// }
   
 	return (
 	<header>
 		<nav className="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<Link className="navbar-item" to="/" data-config-id="brand">
-						<StaticImage src="../images/logo.svg" alt="logo" />
+						<img src={logoImg} alt="Wuru Zeka logo" />
 					</Link>
 
 					<button className={`navbar-burger button is-ghost ${isShowMenu ? 'is-active' : ''}`}
@@ -48,7 +48,7 @@ const Navbar = () => {
 				</div>
 
 				<div id="navbarLinks" className={`navbar-menu is-size-4 ${isShowMenu ? 'is-active' : ''}`}>
-					<div className="navbar-start">
+					{/* <div className="navbar-start">
 						<Link className="navbar-item mx-3"
 							to="/technology"
 							activeClassName="active-link">Technology</Link>
@@ -56,21 +56,28 @@ const Navbar = () => {
 						<Link className="navbar-item mx-3"
 							to="/#pricing"
 							activeClassName="active-link">Pricing</Link>
-						{/* <div className="vr"></div> */}
-						{/* <Link className="navbar-item mx-3"
+						<div className="vr"></div>
+						<Link className="navbar-item mx-3"
 							to="/blog" activeClassName="active-link">Blog</Link>
 						<div className="vr"></div>
 						<a className="navbar-item mx-3"
-							href="https://ieltsregistration.britishcouncil.org/test-chooser">Book IELTS</a> */}
-					</div>
+							href="https://ieltsregistration.britishcouncil.org/test-chooser">Book IELTS</a>
+					</div> */}
 
 					<div className="navbar-end">
-						<form method="post" onSubmit={onSubmit} action="/api/signup-form">
+						<Link className="navbar-item mx-3"
+							to="/technology"
+							activeClassName="active-link">Technology</Link>
+						<div className="vr"></div>
+						<Link className="navbar-item mx-3"
+							to="/#pricing"
+							activeClassName="active-link">Pricing</Link>
+						{/* <form method="post" onSubmit={onSubmit} action="/api/signup-form">
 							<div className="navbar-item is-hidden-mobile">
-							{/* <button className="button is-outlined is-primary is-rounded has-text-weight-semibold"
+							<button className="button is-outlined is-primary is-rounded has-text-weight-semibold"
 									id="primary-header-action">
 								Log in
-							</button> */}
+							</button>
 								<div className="field has-addons">
 									<div className="control">
 										<input type="email" name="email" id="email" className="input is-rounded" placeholder="Enter e-mail to get invited" value={value[`email`] || ``}
@@ -86,7 +93,7 @@ const Navbar = () => {
 									</div>
 								</div>
 							</div>
-						</form>
+						</form> */}
 						{/* <div className="navbar-item">
 							<button className="button is-primary is-rounded is-light has-text-weight-semibold" id="secondary-header-action"> 	Sign up
 							</button>
