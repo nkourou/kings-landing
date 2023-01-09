@@ -16,20 +16,22 @@ const Pricing = () => {
   // When the form is submitted, send the form values
   // to our function for processing.
   async function onSubmit(values, actions) {
-    actions.setSubmitting(false);
+    window.location.href($`https://app.wuruzeka.com/auth/sign-up?email=${values.email}`)
+    // actions.setSubmitting(false);
   
-    setServerResponse('loading')
-    // e.preventDefault()
-    const response = await window
-      .fetch(`/api/signup-form`, {
-        method: `POST`,
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ email: values.email }),
-      })
-      .then(res => res.json())
-    setServerResponse(response)
+    // setServerResponse('loading')
+    // // e.preventDefault()
+    // const response = await window
+    //   .fetch(`/api/signup-form`, {
+    //     method: `POST`,
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify({ email: values.email }),
+    //   })
+    //   .then(res => res.json())
+    // setServerResponse(response)
+    setServerResponse('OK')
   }
 
   return (
@@ -117,46 +119,47 @@ const Pricing = () => {
                       {/* <label htmlFor="email">
                       </label> */}
                     {/* <div className="field has-addons"> */}
-                        <Formik
-                          initialValues={{
-                            email: ''
-                          }}
-                        onSubmit={onSubmit}
-                        validate={values => {
-                          const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-                          const errors = {};
-                          if(!values.email || !emailRegex.test(values.email)) {
-                            errors.email = 'Valid Email Required'
-                          }
-                          return errors;
-                        }}
-                        >
+                    <Formik
+                      initialValues={{
+                        email: ''
+                      }}
+                    onSubmit={onSubmit}
+                    validate={values => {
+                      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+                      const errors = {};
+                      if(!values.email || !emailRegex.test(values.email)) {
+                        errors.email = 'Valid Email Required'
+                      }
+                      return errors;
+                    }}
+                    >
                         {() => (
-                          <Form>
+                      <Form>
                         <div className="field">
                             <div className="control has-text-centered">
                               <ErrorMessage name="email" />
-                              <Field type="email" name="email" id="email" className="input is-rounded is-large is-primary" placeholder="Your e-mail address" disabled={serverResponse === 'OK' || serverResponse === 'loading'}/>
+                              <Field type="email" name="email" id="email" className="input is-rounded is-large is-primary" 
+                              placeholder="Your e-mail address" disabled={serverResponse === 'OK' || serverResponse === 'loading'}/>
                               {/* <input type="email" name="email" id="email" className="input is-rounded is-large is-primary" placeholder="Your e-mail address" value={value[`email`] || ``}
                                 onChange={handleChange} disabled={serverResponse === 'OK' || serverResponse === 'loading'}/> */}
                             </div>
 
-                  </div>
-                  <div className="field has-text-centered">
-                    <div className="control ">
-                      <button className={`button is-primary is-large  is-rounded ${serverResponse === "loading" ? "is-loading" : ""}`} type="submit" disabled={serverResponse === 'OK'}>
-                        
-                        {serverResponse === "OK" ?
-                          <span>Tada <Emoji emoji='🎉' /></span> :
-                          <span>Click here to get invited!</span>
-                        }
-                      </button>
-                    </div>
-                  </div>
-                                              
-                  </Form>
+                        </div>
+                        <div className="field has-text-centered">
+                          <div className="control ">
+                            <button className={`button is-primary is-large  is-rounded ${serverResponse === "loading" ? "is-loading" : ""}`} 
+                            type="submit" disabled={serverResponse === 'OK'}>
+                              {serverResponse === "OK" ?
+                                <span>Tada <Emoji emoji='🎉' /></span> :
+                                <span>Click here to signup!</span>
+                              }
+                            </button>
+                          </div>
+                        </div>
+                                                  
+                      </Form>
                         )}
-                        </Formik>
+                    </Formik>
                     <p className="help has-text-centered">
                       {serverResponse === 'OK' ?
                         <span>Be on the lookout for your special invite link!</span> :
