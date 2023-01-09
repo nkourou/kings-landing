@@ -16,7 +16,7 @@ const Pricing = () => {
   // When the form is submitted, send the form values
   // to our function for processing.
   async function onSubmit(values, actions) {
-    window.location.href(`https://app.wuruzeka.com/auth/sign-up?email=${values.email}`)
+    window.location.href = `https://app.wuruzeka.com/auth/sign-up?email=${values.email}`
     // actions.setSubmitting(false);
   
     // setServerResponse('loading')
