@@ -74,16 +74,15 @@ const Header = () => {
           Let AI fill your gaps in english with targeted learning!
         </h2>
         <div className="buttons is-centered">
-          <a href="/#pricing"
+          <a href="https://app.wuruzeka.com/auth/sign-up"
             className="
-          button
-          is-primary is-rounded is-size-4-desktop
-          has-text-weight-bold
-          "
-            // href="https://app.wuruzeka.com"
+                      button
+                      is-primary is-rounded is-size-4-desktop
+                      has-text-weight-bold
+                      "
             data-config-id="primary-hero"
           >
-            Try now for free
+            Get started
           </a>
         </div>
           {/* <a
