@@ -1,7 +1,6 @@
 import React from 'react';
 import Emoji from './emoji';
 import { FaRegCheckCircle } from 'react-icons/fa';
-import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 
 const Pricing = () => {
@@ -16,7 +15,7 @@ const Pricing = () => {
                   <Emoji emoji='💰'/> Pricing
                 </p>
                 <span className="tag is-warning is-large is-size-2 has-text-weight-bold has-text-right" id="pricing-tag">
-                    $69
+                    $19
                 </span>
               </header>
               <div className="card-content">
@@ -78,9 +77,14 @@ const Pricing = () => {
                       </p>
                     </li> */}
                   </ul>
-                  <a href="https://app.wuruzeka.com/auth/sign-up" className="button is-primary is-large is-rounded">
-                    <span>Try for free today!</span>
-                  </a>
+                  <div className="field has-text-centered">
+                    <div className="control">
+                      <a href="https://app.wuruzeka.com/auth/sign-up" 
+                      className="button is-primary is-large is-rounded">
+                        <span>Try for free today!</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

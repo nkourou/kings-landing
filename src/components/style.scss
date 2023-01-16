@@ -214,5 +214,5 @@ a.navbar-item.active-link {
 }
 
 #pricing-tag {
-	border-radius: 0 $card-radius/2 0 0;
+	border-radius: 0 calc($card-radius / 2) 0 0;
 }

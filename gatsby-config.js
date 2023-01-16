@@ -15,13 +15,17 @@ module.exports = {
     minibio: 'The AI based app for people who want to identify their weakness and improve them. Because rote memorization & passive learning has failed them!',
     keywords: `Artifical Intelligence, Personalized learning, IELTS, IELTS coaching, IELTS prep, English, NLP, Natural Language Processing, Speech recognition`,
     twitter: 'https://twitter.com/wuruzeka',
-    instagram: "https://instagram.com/wuruzeka",
+    instagram: "https://www.instagram.com/wuruzeka_learning/",
     fbAppID: process.env.WZ_FB_ID,
     mixpanel: process.env.WZ_MXPNL_ID,
     medium: 'https://medium.com/@wuruzeka',
     siteUrl: siteUrl,
     appUrl: process.env.APP_URL || "https://app.wuruzeka.com",
-    organization: { name: "Wuru Zeka Inc.", logo: "https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg", url: siteUrl }
+    organization: { 
+      name: "Wuru Zeka Inc.", 
+      logo: "https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg", 
+      url: siteUrl 
+    }
   },
   flags: { 
     // PRESERVE_WEBPACK_CACHE: true,
