@@ -81,7 +81,7 @@ audio, canvas, embed, iframe, img object, svg, video {
 
 .card:hover {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	// transform: scale(1.02);
+	transform: scale(1.02);
 }
 
 .vr {
@@ -169,7 +169,7 @@ audio, canvas, embed, iframe, img object, svg, video {
 	left: 14%;
 	width: 72%;
 	height: 66%;
-	// transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
 	
 }
 
@@ -215,4 +215,13 @@ a.navbar-item.active-link {
 
 #pricing-tag {
 	border-radius: 0 calc($card-radius / 2) 0 0;
+	pointer-events: none;
+	flex-direction: column;
+	height: auto;
+}
+
+.price-tag {
+	text-decoration: line-through; 
+	text-decoration-color: red;
+	// text-decoration-thickness: 50px;
 }

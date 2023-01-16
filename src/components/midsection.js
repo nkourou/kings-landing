@@ -11,9 +11,9 @@ const Midsection = () => {
         data-section-id="2"
         className="section"
       >
-        <div className="columns is-variable is-5" data-sal="slide-up">
+        <div className="columns is-variable is-5">
           <div className="column is-4">
-            <div className="card">
+            <div className="card" data-sal="slide-left">
               {/* <StaticImage
                 alt="3.5+ Million test takers"
                 src="../images/undraw_Airport_re_oqk1.svg"
@@ -22,19 +22,17 @@ const Midsection = () => {
               <h3 className="title is-spaced is-size-3 has-text-centered">
                 3.5+ Million test takers
               </h3>
-              <p className="subtitle is-size-4">
-                The average score of IELTS test takers without preparation
-                is <strong>6.53</strong>.
-              </p>
-              <p>
-                This is less than the minimum required
-                for both, admission to universities and immigration to countries
-                like Canada, Australia, etc.
-              </p>
+              <div className="card-content">
+                <p className="subtitle is-size-4">
+                  The average score of IELTS test takers without preparation
+                  is <strong>6.53</strong> is less than the minimum required.
+                  {/* for immigration to countries like Canada, and Australia. */}
+                </p>
+              </div>
             </div>
           </div>
           <div className="column is-4">
-            <div className="card">
+            <div className="card" data-sal="slide-up">
               {/* <StaticImage
                 alt="Passive learning"
                 src="../images/undraw_book_lover_mkck.svg"
@@ -42,35 +40,29 @@ const Midsection = () => {
               <h3 className="title is-spaced is-size-3 has-text-centered">
                 Passive learning <Emoji emoji="😕" />
               </h3>
-              <p className="subtitle is-size-4">
-                Watching videos and webinar can only take you so far.
-              </p>
-              <p>
-                Giving
-                mock tests over and over again is only practicing the same
-                mistakes repeatedly.
-              </p>
+              <div className="card-content">
+                <p className="subtitle is-size-4">
+                  Watching videos and giving mock tests over and over again is 
+                  only practicing the same mistakes repeatedly.
+                </p>
+              </div>
             </div>
           </div>
           <div className="column is-4">
-            <div className="card">
+            <div className="card" data-sal="slide-left">
               {/* <StaticImage
                 alt="We diagnose and fix it"
                 src="../images/undraw_doctors_hwty.svg"
               /> */}
               <h3 className="title is-spaced is-size-3 has-text-centered">
-                We diagnose and fix it <Emoji emoji="🧙🏼‍♀️" />
+              Wuru Zeka magic <Emoji emoji="🧙🏼‍♀️" />
               </h3>
-              <p className="subtitle is-size-4">
-                Human + Artificial
-                intelligence will not only surface & fix your weaknesses, but
-                also reinforce your strengths.
-              </p>
-              <p>
-                Using guided learning experiences
-                tailored as per your needs, AI teaches you to get highest scores
-                in shortest amount of time.
-              </p>
+              <div className="card-content">
+                <p className="subtitle is-size-4">
+                  Using personalized learning, AI not only fixes your weaknesses, 
+                  but also reinforces your strengths.
+                </p>
+              </div>
             </div>
           </div>
         </div>
