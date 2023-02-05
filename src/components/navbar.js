@@ -72,13 +72,13 @@ const Navbar = () => {
 						<Link className="navbar-item mx-3"
 							to="/#pricing"
 							activeClassName="active-link">Pricing</Link>
+						<div className="vr"></div>
 						<Link className="navbar-item mx-3"
 							to="/#how-it-works"
 							activeClassName="active-link">How it works</Link>
-						<div className="vr"></div>
-						<Link className="navbar-item mx-3"
+						{/* <Link className="navbar-item mx-3"
 							to="https://app.wuruzeka.com/auth/sign-up"
-							activeClassName="active-link">Sign-up</Link>
+							activeClassName="active-link">Sign-up</Link> */}
 						<div className="vr"></div>
 						<Link className="navbar-item mx-3"
 							to="https://app.wuruzeka.com/auth/login"
