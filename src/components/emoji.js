@@ -6,7 +6,7 @@ const Emoji = (props) => {
 	};
 
 	return (
-		<span style={styles} role="img" aria-label="emoji">
+		<span style={styles} className="px-1" role="img" aria-label="emoji">
 			{props.emoji}
 		</span>
 	);

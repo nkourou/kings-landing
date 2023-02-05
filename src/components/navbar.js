@@ -72,6 +72,17 @@ const Navbar = () => {
 						<Link className="navbar-item mx-3"
 							to="/#pricing"
 							activeClassName="active-link">Pricing</Link>
+						<div className="vr"></div>
+						<Link className="navbar-item mx-3"
+							to="/#how-it-works"
+							activeClassName="active-link">How it works</Link>
+						{/* <Link className="navbar-item mx-3"
+							to="https://app.wuruzeka.com/auth/sign-up"
+							activeClassName="active-link">Sign-up</Link> */}
+						<div className="vr"></div>
+						<Link className="navbar-item mx-3"
+							to="https://app.wuruzeka.com/auth/login"
+							activeClassName="active-link">Login</Link>
 						{/* <form method="post" onSubmit={onSubmit} action="/api/signup-form">
 							<div className="navbar-item is-hidden-mobile">
 							<button className="button is-outlined is-primary is-rounded has-text-weight-semibold"

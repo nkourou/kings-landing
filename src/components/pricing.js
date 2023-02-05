@@ -1,53 +1,23 @@
 import React from 'react';
 import Emoji from './emoji';
 import { FaRegCheckCircle } from 'react-icons/fa';
-import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 
 const Pricing = () => {
-  // const [value, setValue] = React.useState({})
-  const [serverResponse, setServerResponse] = React.useState(``)
-  // Listen to form changes and save them.
-  // function handleChange(e) {
-  //   value[e.target.id] = e.target.value
-  //   setServerResponse(``)
-  //   setValue({ ...value })
-  // }
-  // When the form is submitted, send the form values
-  // to our function for processing.
-  async function onSubmit(values, actions) {
-    window.location.href = `https://app.wuruzeka.com/auth/sign-up?email=${values.email}`
-    // actions.setSubmitting(false);
-  
-    // setServerResponse('loading')
-    // // e.preventDefault()
-    // const response = await window
-    //   .fetch(`/api/signup-form`, {
-    //     method: `POST`,
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     body: JSON.stringify({ email: values.email }),
-    //   })
-    //   .then(res => res.json())
-    // setServerResponse(response)
-    setServerResponse('OK')
-  }
-
   return (
-    
     <section id="pricing" className="mb-6">
       <div className="container">
         <div className="columns is-centered px-3">
-          <div className="column is-two-thirds">
+          <div className="column is-three-quarters">
             <div className="card has-background-warning-light">
               <header className="card-header">
                 <p className="card-header-title is-size-2">
                   <Emoji emoji='💰'/> Pricing
                 </p>
-                <span className="tag is-warning is-large is-size-2 has-text-weight-bold has-text-right" id="pricing-tag">
-                    $69
-                </span>
+                <button className="button card-header-icon is-warning is-large is-size-2 has-text-weight-bold" id="pricing-tag">
+                    <span><span class="price-tag has-text-grey">$49</span> $29</span>
+                    <span class='help tag has-background-warning-light'><Emoji emoji='🎉'/> 40% off </span>
+                </button>
               </header>
               <div className="card-content">
                 <div className="content is-size-4">
@@ -64,17 +34,17 @@ const Pricing = () => {
                         Unlimited access to past and upcoming webinars
                       </p>
                     </li> */}
-                    <li>
+                    {/* <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        {/* Daily classes and a dedicated IELTS expert assigned to you */}
+                        Daily classes and a dedicated IELTS expert assigned to you
                         A dedicated IELTS expert assigned to you <Emoji emoji='🧞‍♂️'/>
                       </p>
-                    </li>
+                    </li> */}
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Free of cost 24x7 unlimited question-answering with IELTS experts
+                        Unlimited question-answering with IELTS experts
                       </p>
                     </li>
                     <li>
@@ -86,7 +56,7 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Unlimited Reading and Listening mock tests
+                        100 Reading, Writing, Speaking and Listening mock tests
                       </p>
                     </li>
                     <li>
@@ -98,75 +68,28 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Free trial for a week to use at your hearts content <Emoji emoji='😍'/>
+                        100% satisfaction peace-of-mind money back guarantee
                       </p>
                     </li>
-                    <li>
+                    {/* <li>
+                      <p>
+                        <FaRegCheckCircle className="mr-2 has-text-success"/>
+                        Free trial for a week to use at your hearts content <Emoji emoji='😍'/>
+                      </p>
+                    </li> */}
+                    {/* <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
                         Get 20% cashback by uploading your official IELTS results
                       </p>
-                    </li>
+                    </li> */}
                   </ul>
-                  {/* <article className="message is-warning">
-                    <div className="message-body">
-                      Free trial for a week to use at your hearts content <Emoji emoji='🎉'/>
-                    </div>
-                  </article> */}
-                  {/* <form method="post" action="https://getform.io/f/11d11e9e-066b-45c5-a194-529634758a02"> */}
-                  
-                    {/* <form method="post" onSubmit={onSubmit} action="/api/signup-form"> */}
-                      {/* <label htmlFor="email">
-                      </label> */}
-                    {/* <div className="field has-addons"> */}
-                    <Formik
-                      initialValues={{
-                        email: ''
-                      }}
-                    onSubmit={onSubmit}
-                    validate={values => {
-                      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-                      const errors = {};
-                      if(!values.email || !emailRegex.test(values.email)) {
-                        errors.email = 'Valid Email Required'
-                      }
-                      return errors;
-                    }}
-                    >
-                        {() => (
-                      <Form>
-                        <div className="field">
-                            <div className="control has-text-centered">
-                              <ErrorMessage name="email" />
-                              <Field type="email" name="email" id="email" className="input is-rounded is-large is-primary" 
-                              placeholder="Your e-mail address" disabled={serverResponse === 'OK' || serverResponse === 'loading'}/>
-                              {/* <input type="email" name="email" id="email" className="input is-rounded is-large is-primary" placeholder="Your e-mail address" value={value[`email`] || ``}
-                                onChange={handleChange} disabled={serverResponse === 'OK' || serverResponse === 'loading'}/> */}
-                            </div>
-
-                        </div>
-                        <div className="field has-text-centered">
-                          <div className="control ">
-                            <button className={`button is-primary is-large  is-rounded ${serverResponse === "loading" ? "is-loading" : ""}`} 
-                            type="submit" disabled={serverResponse === 'OK'}>
-                              {serverResponse === "OK" ?
-                                <span>Tada <Emoji emoji='🎉' /></span> :
-                                <span>Click here to signup!</span>
-                              }
-                            </button>
-                          </div>
-                        </div>
-                                                  
-                      </Form>
-                        )}
-                    </Formik>
-                    <p className="help has-text-centered">
-                      {serverResponse === 'OK' ?
-                        <span>Be on the lookout for your special invite link!</span> :
-                        <span>We don't spam, promise!</span>
-                      }
-                    </p>
-                  {/* </form> */}
+                  <div className="has-text-centered">
+                      <a href="https://app.wuruzeka.com/auth/sign-up" 
+                      className="button is-primary is-large is-rounded has-text-weight-semibold">
+                        Try for free today!
+                      </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -3,7 +3,6 @@ import patternImg from "../images/pattern.png";
 import dashboardImg from "../images/dashboard.png";
 import "./style.scss";
 import Typed from "typed.js";
-
 // class Header extends React.Component {
 const Header = () => {
   // determined if page has scrolled and if the view is on mobile
@@ -14,7 +13,7 @@ const Header = () => {
   // change state on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
+      const isScrolled = window.scrollY > 200;
       if (isScrolled !== state.scrolled) {
         setState({
           scrolled: !state.scrolled,
@@ -35,14 +34,14 @@ const Header = () => {
       data-category="headers"
       className="section is-background-contain is-background-no-repeat"
     >
-      {/* <a
-        className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${
-          state.scrolled ? "" : "is-hidden"
-          }`}
-        href="https://app.wuruzeka.com"
-      >
-        Try demo
-      </a> */}
+    <a
+      className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${
+        state.scrolled ? "" : "is-hidden"
+        }`}
+      href="https://app.wuruzeka.com"
+    >
+      Try for free
+    </a>
 
       <div className="mx-auto has-text-centered">
         <h1 className="title is-size-1-desktop text-5xl is-size-2-touch">
@@ -74,16 +73,15 @@ const Header = () => {
           Let AI fill your gaps in english with targeted learning!
         </h2>
         <div className="buttons is-centered">
-          <a href="/#pricing"
+          <a href="https://app.wuruzeka.com/auth/sign-up"
             className="
-          button
-          is-primary is-rounded is-size-4-desktop
-          has-text-weight-bold
-          "
-            // href="https://app.wuruzeka.com"
+                      button
+                      is-primary is-rounded is-size-4-desktop
+                      has-text-weight-bold
+                      "
             data-config-id="primary-hero"
           >
-            Try now for free
+            Get started
           </a>
         </div>
           {/* <a
@@ -94,7 +92,8 @@ const Header = () => {
             Book IELTS
           </a> */}
       </div>
-      <div className="mx-auto is-relative is-centered" data-sal="slide-up">
+      {/*  data-sal="slide-up" */}
+      <div className="mx-auto is-relative is-centered">
         <img src={patternImg} alt="pattern background" />
         <figure className="header-image image">
           <img src={dashboardImg} alt="Gif of platform" />

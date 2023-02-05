@@ -19,17 +19,16 @@ const AboutSection = () => (
     </section>
     <section className="section mb-6">
       <p className="mb-3">
-        WuruZeka was initially developed to help students who have tried all
-        methods and were simply not able to progress. Our system found core
-        weaknesses and helped them improve these aspects.
+        WuruZeka was initially developed by graduates from MIT, Harvard and CMU. The platform is backed by 10,000+ hours of 
+        instructional design that our Artifical Intelligence has learned from. This allows WuruZeka to surface core
+        weaknesses and reinforce existing strengths for students from 
+        all walks of life.
       </p>
       <p>
-        After proving value for this subset of students, we expanded our
-        technology to general audience who can use our AI to improve themselves
-        as well!
+        After proving value for this subset of students, we expanded our technology to general audience who can use our AI to improve themselves as well!
       </p>
       <blockquote>
-        The term <i>Wuru Zeka</i> stems from two languages. Wuru means Artificial in an indigenous African language and Zeka means Intelligence in Turkish. Together they form Artifical Intelligence which is the core technology behind our success.
+        As for our name, the term <i>Wuru Zeka</i> stems from two languages. Wuru means Artificial in an indigenous African language and Zeka means Intelligence in Turkish. Together they form Artifical Intelligence which is the core technology behind our success.
       </blockquote>
     </section>
   </div>
