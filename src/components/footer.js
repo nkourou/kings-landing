@@ -49,7 +49,7 @@ const Footer = () => (
               <div className="is-size-6">
                 <hr />
                 <p>
-                  The AI based app for people who want to identify their
+                  Science backed app for people who want to identify their
                   weakness and improve them. Because rote memorization &amp;
                   passive learning has failed them!
                 </p>
@@ -80,9 +80,9 @@ const Footer = () => (
                   <div className="menu">
                     <p className="menu-label">Company</p>
                     <ul className="menu-list">
-                      {/* <li>
+                      <li>
                         <Link to="/blog" activeClassName="is-active">Blog</Link>
-                      </li> */}
+                      </li>
                       <li>
                         <Link to="/about-us" activeClassName="is-active">
                           About Us

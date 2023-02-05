@@ -194,7 +194,7 @@ const TechSection = () => {
           is-primary is-rounded is-large
           has-text-weight-bold
           "
-            href="https://app.wuruzeka.com"
+            href="https://app.wuruzeka.com/auth/sign-up"
           >
             Try now for free
           </a>

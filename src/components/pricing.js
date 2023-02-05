@@ -65,6 +65,12 @@ const Pricing = () => {
                         Pay minimal for further evaluations only if needed
                       </p>
                     </li>
+                    <li>
+                      <p>
+                        <FaRegCheckCircle className="mr-2 has-text-success"/>
+                        100% satisfaction peace-of-mind money back guarantee
+                      </p>
+                    </li>
                     {/* <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>

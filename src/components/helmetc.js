@@ -91,6 +91,7 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
               async=""
               src="https://www.google-analytics.com/analytics.js"
             ></script>
+            <script src="//code.tidio.co/yajtuyakmo1zg0rxumwk38ttbfsdzzbu.js" async></script>
             {/* <script
               type="text/javascript"
               async=""
