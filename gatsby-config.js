@@ -45,12 +45,24 @@ module.exports = {
         trackingIds: [
           process.env.WZ_GA_ID, // Google Analytics / GA
         ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
-          head: true,
-          anonymize_ip: true,
-        },
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          // Defaults to https://www.googletagmanager.com
+          // Delays processing pageview events on route update (in milliseconds)
+          delayOnRouteUpdate: 0,
+        }
       },
     },
     "gatsby-plugin-react-helmet",
@@ -78,64 +90,66 @@ module.exports = {
       },
       __key: "pages",
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: 'GraphCMS',
-        fieldName: 'gcms',
-        url: process.env.WZ_GRAPH_CMS_API
-      }
-    },
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-          query: `
-          {
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-            gcms {
-              posts {
-                slug
-                updatedAt
-              }
-            }
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-        `,
-        resolveSiteUrl: () => siteUrl,
-        resolvePages: ({
-          allSitePage: { edges: allPages },
-          gcms: { posts: allGcmsPosts },
-          site: { siteMetadata: metadata }
-        }) => {
-          const wpNodeMap = allGcmsPosts.reduce((acc, node) => {
-            const { slug } = node
-            acc[`/blog/${slug}`] = node
+    // {
+    //   resolve: "gatsby-source-graphcms",
+    //   options: {
+    //     id: '7ivnetl27wl6',
+    //     token: 'CFPAT-gPCTAJpjOyzVABOFToIEUjzyxMh__1BL9kifC01Ji9o',
+    //     url: 'gjLAL7RtylXX1DAr7CNdl_uQgpfr4H1Dht5uy7uGvbw'
+    //     // endpoint: process.env.WZ_GRAPH_CMS_API,
+    //     // token: process.env.WZ_GRAPH_TOKEN
+    //   }
+    // },
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    //   options: {
+    //       query: `
+    //       {
+    //         allSitePage {
+    //           edges {
+    //             node {
+    //               path
+    //             }
+    //           }
+    //         }
+    //         gcms {
+    //           posts {
+    //             slug
+    //             updatedAt
+    //           }
+    //         }
+    //         site {
+    //           siteMetadata {
+    //             siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     resolveSiteUrl: () => siteUrl,
+    //     resolvePages: ({
+    //       allSitePage: { edges: allPages },
+    //       gcms: { posts: allGcmsPosts },
+    //       site: { siteMetadata: metadata }
+    //     }) => {
+    //       const wpNodeMap = allGcmsPosts.reduce((acc, node) => {
+    //         const { slug } = node
+    //         acc[`/blog/${slug}`] = node
 
-            return acc
-          }, {})
-          return allPages.map(edge => {
-            const path = metadata.siteUrl + edge.node.path
-            return { path, ...wpNodeMap[edge.node.path] }
-          })
-        },
-        serialize: ({ path, updatedAt }) => {
-          return {
-            url: path,
-            lastmod: updatedAt,
-          }
-        },
-      },
-    },
+    //         return acc
+    //       }, {})
+    //       return allPages.map(edge => {
+    //         const path = metadata.siteUrl + edge.node.path
+    //         return { path, ...wpNodeMap[edge.node.path] }
+    //       })
+    //     },
+    //     serialize: ({ path, updatedAt }) => {
+    //       return {
+    //         url: path,
+    //         lastmod: updatedAt,
+    //       }
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

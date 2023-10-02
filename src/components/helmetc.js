@@ -35,7 +35,7 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
       const url = slug ? `${data.site.siteMetadata.siteUrl}/blog/${slug}/`
         : data.site.siteMetadata.siteUrl;
       const datePublished = isBlogPost ? date : false;
-      const author  = authorName || data.site.siteMetadata.author;
+      const author = authorName || data.site.siteMetadata.author;
       return (
         <React.Fragment key={slug}>
           <Helmet key="helmet">
@@ -86,11 +86,11 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
             />
             <meta name="twitter:card" content="summary_large_image" />
 
-            <script
+            {/* <script
               type="text/javascript"
               async=""
               src="https://www.google-analytics.com/analytics.js"
-            ></script>
+            ></script> */}
             <script src="//code.tidio.co/yajtuyakmo1zg0rxumwk38ttbfsdzzbu.js" async></script>
             {/* <script
               type="text/javascript"
@@ -106,10 +106,10 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
         ></script> */}
 
             {/* Facebook Pixel Code https://www.facebook.com/events_manager2/list/pixel/349992816762548/settings?act=94102612 */}
-            <script
+            {/* <script
               async=""
               src="https://connect.facebook.net/en_US/fbevents.js"
-            ></script>
+            ></script> */}
 
             {/*  Hotjar Tracking Code */}
             {/* <script
