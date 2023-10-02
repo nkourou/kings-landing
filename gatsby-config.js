@@ -93,9 +93,9 @@ module.exports = {
     // {
     //   resolve: "gatsby-source-graphcms",
     //   options: {
-    //     id: '7ivnetl27wl6',
-    //     token: 'CFPAT-gPCTAJpjOyzVABOFToIEUjzyxMh__1BL9kifC01Ji9o',
-    //     url: 'gjLAL7RtylXX1DAr7CNdl_uQgpfr4H1Dht5uy7uGvbw'
+    //     id: process.env.CONTENTFUL_ID,
+    //     token: process.env.CONTENTFUL_TOKEN,
+    //     url: process.env.CONTENTFUL_URL,
     //     // endpoint: process.env.WZ_GRAPH_CMS_API,
     //     // token: process.env.WZ_GRAPH_TOKEN
     //   }
