@@ -1,0 +1,61 @@
+fragment Navigation on Navigation {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  navId
+  link {
+    ... on Link {
+      stage
+      id
+      displayText
+      externalUrl
+      page {
+        ... on Author {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+        ... on Page {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+        ... on Post {
+          remoteTypeName: __typename
+          remoteId: id
+          stage
+        }
+      }
+    }
+  }
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}
