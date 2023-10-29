@@ -37,7 +37,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
-    "gatsby-plugin-scroll-reveal",
+    "gatsby-plugin-scroll-reveal-fixed",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
