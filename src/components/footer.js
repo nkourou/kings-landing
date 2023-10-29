@@ -80,9 +80,9 @@ const Footer = () => (
                   <div className="menu">
                     <p className="menu-label">Company</p>
                     <ul className="menu-list">
-                      <li>
+                      {/* <li>
                         <Link to="/blog" activeClassName="is-active">Blog</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link to="/about-us" activeClassName="is-active">
                           About Us
