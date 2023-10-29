@@ -65,10 +65,10 @@ const Navbar = () => {
 					</div> */}
 
 					<div className="navbar-end">
-						<Link className="navbar-item mx-3"
+						{/* <Link className="navbar-item mx-3"
 							to="/technology"
 							activeClassName="active-link">Technology</Link>
-						<div className="vr"></div>
+						<div className="vr"></div> */}
 						<Link className="navbar-item mx-3"
 							to="/#pricing"
 							activeClassName="active-link">Pricing</Link>
