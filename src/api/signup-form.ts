@@ -1,9 +1,12 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
 import fetch from "node-fetch"
 
-
+interface ContactBody {
+    email: string
+}
+  
 export default async function handler(
-    req: GatsbyFunctionRequest,
+    req: GatsbyFunctionRequest<ContactBody>,
     res: GatsbyFunctionResponse
 ) {
     if (!req.body.email) {
