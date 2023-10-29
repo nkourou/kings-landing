@@ -38,7 +38,6 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-scroll-reveal-fixed",
-    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
