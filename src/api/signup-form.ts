@@ -10,7 +10,7 @@ export default async function handler(
     res: GatsbyFunctionResponse
 ) {
     if (!req.body.email) {
-        return res.status(422).json("Email field is required")
+        return res.status(422).send("Email field is required")
     }
 
     // POST data to Zapier who sends it to Google sheet & Slack 
@@ -29,6 +29,7 @@ export default async function handler(
     //     date: new Date(Date.now()).toUTCString(),
     //     email: req.body.email
     // }
+
     try {
         await fetch(url, {
             method: "POST",
@@ -37,8 +38,8 @@ export default async function handler(
         }).then(res => {
             return res.json()
         })
-        res.status(200).json('OK')
+        res.status(200)
     } catch (error) {
-        res.status(500).send(error)
+        res.status(500)
     }
 }
