@@ -37,7 +37,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
-    "gatsby-plugin-scroll-reveal-fixed",
+    // "gatsby-plugin-scroll-reveal-fixed",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -83,6 +83,14 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.WZ_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.WZ_CONTENTFUL_ACCESS_TOKEN,
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
@@ -100,56 +108,68 @@ module.exports = {
     //     // token: process.env.WZ_GRAPH_TOKEN
     //   }
     // },
-    // {
-    //   resolve: "gatsby-plugin-sitemap",
-    //   options: {
-    //       query: `
-    //       {
-    //         allSitePage {
-    //           edges {
-    //             node {
-    //               path
-    //             }
-    //           }
-    //         }
-    //         gcms {
-    //           posts {
-    //             slug
-    //             updatedAt
-    //           }
-    //         }
-    //         site {
-    //           siteMetadata {
-    //             siteUrl
-    //           }
-    //         }
-    //       }
-    //     `,
-    //     resolveSiteUrl: () => siteUrl,
-    //     resolvePages: ({
-    //       allSitePage: { edges: allPages },
-    //       gcms: { posts: allGcmsPosts },
-    //       site: { siteMetadata: metadata }
-    //     }) => {
-    //       const wpNodeMap = allGcmsPosts.reduce((acc, node) => {
-    //         const { slug } = node
-    //         acc[`/blog/${slug}`] = node
+                // gcms {
+            //   posts {
+            //     slug
+            //     updatedAt
+            //   }
+            // }
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+          query: `
+          {
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
 
-    //         return acc
-    //       }, {})
-    //       return allPages.map(edge => {
-    //         const path = metadata.siteUrl + edge.node.path
-    //         return { path, ...wpNodeMap[edge.node.path] }
-    //       })
-    //     },
-    //     serialize: ({ path, updatedAt }) => {
-    //       return {
-    //         url: path,
-    //         lastmod: updatedAt,
-    //       }
-    //     },
-    //   },
-    // },
+            gcms {
+              allContentfulPageBlogPost(sort: {publishedDate: DESC}) {
+                nodes {
+                  contentful_id
+                  id
+                  title
+                  description
+                  gatsbyPath(filePath: "/products/{ContentfulPageBlog.id}")
+                }
+              }
+            }
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { edges: allPages },
+          gcms: { allContentfulPageBlogPost: nodes },
+          site: { siteMetadata: metadata }
+        }) => {
+          const wpNodeMap = nodes.reduce((acc, node) => {
+            const { slug } = node
+            acc[`/blog/${slug}`] = node
+
+            return acc
+          }, {})
+          return allPages.map(edge => {
+            const path = metadata.siteUrl + edge.node.path
+            return { path, ...wpNodeMap[edge.node.path] }
+          })
+        },
+        serialize: ({ path, updatedAt }) => {
+          return {
+            url: path,
+            lastmod: updatedAt,
+          }
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

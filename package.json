@@ -1,7 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "@graphcms/rich-text-react-renderer": "^0.6.1",
+    "@contentful/rich-text-plain-text-renderer": "^16.0.11",
     "bulma": "^0.9.4",
     "encoding": "^0.1.13",
     "gatsby": "^5.12.4",
@@ -15,6 +15,7 @@
     "gatsby-plugin-scroll-reveal-fixed": "^0.0.9",
     "gatsby-plugin-sharp": "^5.12.0",
     "gatsby-plugin-sitemap": "^6.12.0",
+    "gatsby-source-contentful": "^8.13.1",
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.1.0",
@@ -23,6 +24,7 @@
     "react-icons": "^4.7.1",
     "react-side-effect": "^2.1.2",
     "sass": "^1.57.0",
+    "sharp": "^0.33.2",
     "string-width": "^6.1.0",
     "typed.js": "^2.0.12"
   },
