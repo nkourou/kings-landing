@@ -75,12 +75,14 @@ const Blog = () => {
     >
       <div className="columns is-multiline mx-3">
         {posts.allContentfulPageBlogPost.nodes.map(({ slug, ...post }) => (
-          <div className="column is-4">
+          <div className="column is-4" key={slug}>
             <div className="card is-flex is-flex-direction-column">
               <div className="card-image">
+              <Link to={`/blog/${slug}`}>
                 <figure className="image">
                   <img src={post.featuredImage.publicUrl} alt="Blog cover" />
                 </figure>
+                </Link>
               </div>
               <div className="card-content is-flex-grow-1">
                 <div className="media">

@@ -61,7 +61,7 @@ const Footer = () => {
               {/* <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Product</p>
-                  <ul className="menu-list">
+                  <ul className="menu-list no-disc">
                     <li>
                       <Link to="/" activeClassName="is-active">
                         Home
@@ -78,10 +78,10 @@ const Footer = () => {
               <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Company</p>
-                  <ul className="menu-list">
-                    {/* <li>
+                  <ul className="menu-list no-disc">
+                    <li>
                       <Link to="/blog" activeClassName="is-active">Blog</Link>
-                    </li> */}
+                    </li>
                     <li>
                       <Link to="/about-us" activeClassName="is-active">
                         About Us
@@ -103,7 +103,7 @@ const Footer = () => {
               <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Connect with us</p>
-                  <ul className="menu-list">
+                  <ul className="menu-list no-disc">
                     <li>
                       <a
                         href="mailto:support@wuruzeka.com"

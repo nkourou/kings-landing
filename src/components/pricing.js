@@ -21,7 +21,7 @@ const Pricing = () => {
               </header>
               <div className="card-content">
                 <div className="content is-size-4">
-                 <ul className="mb-6">
+                 <ul className="mb-6 no-disc">
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>

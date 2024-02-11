@@ -27,15 +27,16 @@ module.exports = {
       url: siteUrl 
     }
   },
-  flags: { 
+  // flags: { 
     // PRESERVE_WEBPACK_CACHE: true,
     // PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // PARALLEL_SOURCING: true,
     // LMDB_STORE: true
-   },
+  //  },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-gatsby-cloud",
+    // "gatsby-plugin-gatsby-cloud",
+    "gatsby-transformer-remark",
     "gatsby-plugin-image",
     // "gatsby-plugin-scroll-reveal-fixed",
     {
@@ -86,7 +87,6 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.WZ_SPACE_ID,
-        // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.WZ_CONTENTFUL_ACCESS_TOKEN,
       }
     },
@@ -127,39 +127,38 @@ module.exports = {
               }
             }
 
-            gcms {
-              allContentfulPageBlogPost(sort: {publishedDate: DESC}) {
-                nodes {
-                  contentful_id
-                  id
-                  title
-                  description
-                  gatsbyPath(filePath: "/products/{ContentfulPageBlog.id}")
-                }
-              }
-            }
+            
             site {
               siteMetadata {
                 siteUrl
               }
             }
           }
-        `,
+          `,
+          // gcms {
+          //   allContentfulPageBlogPost(sort: {publishedDate: DESC}) {
+          //     nodes {
+          //       slug
+          //     }
+          //   }
+          // }
         resolveSiteUrl: () => siteUrl,
         resolvePages: ({
           allSitePage: { edges: allPages },
-          gcms: { allContentfulPageBlogPost: nodes },
+          // gcms: { allContentfulPageBlogPost: nodes },
           site: { siteMetadata: metadata }
         }) => {
-          const wpNodeMap = nodes.reduce((acc, node) => {
-            const { slug } = node
-            acc[`/blog/${slug}`] = node
+          // const wpNodeMap = nodes.reduce((acc, node) => {
+          //   const { slug } = node
+          //   acc[`/blog/${slug}`] = node
 
-            return acc
-          }, {})
+          //   return acc
+          // }, {})
+
           return allPages.map(edge => {
             const path = metadata.siteUrl + edge.node.path
-            return { path, ...wpNodeMap[edge.node.path] }
+            // return { path, ...wpNodeMap[edge.node.path] }
+            return { path }
           })
         },
         serialize: ({ path, updatedAt }) => {

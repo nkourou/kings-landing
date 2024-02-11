@@ -1,50 +1,66 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
-import { RichText } from "@graphcms/rich-text-react-renderer";
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const pageQuery = graphql`
   query PostPageQuery($id: String) {
     contentfulPageBlogPost(id: {eq: $id}) {
+      id
+      title
+      slug
+      shortDescription {
+        id
+        shortDescription
+        childMarkdownRemark {
+          html
+        }
+      }
+      seoFields {
+        id
+        pageTitle
+        pageDescription {
+          id
+          pageDescription
+        }
+      }
+      publishedDate(formatString: "MMMM Do, YYYY")
+      author {
+        name
+        avatar {
+          publicUrl
+        }
+      }
+      featuredImage {
+        publicUrl
+      }
+      content {
+        raw
+      }
+      relatedBlogPosts {
         id
         title
         slug
         shortDescription {
-          id
           shortDescription
-        }
-        seoFields {
-          id
-        }
-        publishedDate(formatString: "MMMM Do, YYYY")
-        author {
-          name
-          avatar {
-            publicUrl
-          }
         }
         featuredImage {
           publicUrl
-          gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 424, height: 212)
-        }
-        content {
-          raw
         }
       }
     }
+  }
     `;
+    // gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 424, height: 212)
 
-const PostPage = () => {
+const PostPage = ({ pageContext }) => {
+  // console.log(pageContext);
   const post = useStaticQuery(pageQuery).contentfulPageBlogPost;
-  console.log(post);
-  const AVG_READING_SPEED = 150;
   const plainTextBody = documentToPlainTextString(JSON.parse(post.content.raw))
-
+  
+  const AVG_READING_SPEED = 150;
   let readTime = plainTextBody.split(" ").length / AVG_READING_SPEED;
   readTime =
     readTime < 1
@@ -62,8 +78,8 @@ const PostPage = () => {
       authorName={post.author.name}
     >
       <div className="has-text-centered">
-        <h1 className="title is-size-1">{post.title}</h1>
-        <h3 className="subtitle">{post.excerpt}</h3>
+        <h1 className="title">{post.title}</h1>
+        <h3 className="subtitle">{post.shortDescription.shortDescription}</h3>
         <img src={post.featuredImage.publicUrl} alt="cover" />
       </div>
       <section className="section">
@@ -89,6 +105,7 @@ const PostPage = () => {
                   className="level-item"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={post.slug}
                   href={
                     "https://twitter.com/intent/tweet?hashtags=ielts%2Ctutor%2Cprep&amp;original_referer=https%3A%2F%2Fwuruzeka.com%2F&amp;ref_src=twsrc%5Etfw&amp;related=twitterapi%2Ctwitter&amp;text=Great%20tips%20to%20prepare%20for%20IELTS&amp;tw_p=WuruZeka&amp;via=WuruZeka&amp;url=https%3A%2F%2Fwuruzeka.com%2Fblog%2F" +
                     post.slug
@@ -100,6 +117,7 @@ const PostPage = () => {
                   className="level-item"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={post.slug}
                   href={
                     "https://www.facebook.com/share.php?title=Writing+IELTS+for+Success&u=https%3A%2F%2Fwuruzeka.com%2Fblog%2F" +
                     post.slug
@@ -111,6 +129,7 @@ const PostPage = () => {
                   className="level-item"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={post.slug}
                   href={
                     "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwuruzeka.com%2Fblog%2F" +
                     post.slug
@@ -122,88 +141,62 @@ const PostPage = () => {
             </nav>
           </div>
         </article>
-        <p className="my-5 has-text-justified">
-            {plainTextBody}
-            {post.body?.raw && renderRichText(post.content, {
-                renderNode: {
-                    [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                    const { gatsbyImage, description } = node.data.target
-                    return (
-                    <GatsbyImage
-                        image={getImage(gatsbyImage)}
-                        alt={description}
-                    />
-                    )
-                    },
-                },
-                })}
-          <RichText
-            content={post.content.raw}
-            renderers={{
-              img: ({ children, alt, ...rest }) => (
-                <img alt={alt} {...rest}>
-                  {children}
-                </img>
-              ),
-              bold: ({ children }) => <strong>{children}</strong>,
-              a: ({ children, openInNewTab, href, rel, ...rest }) => {
-                if (href.match(/^https?:\/\/|^\/\//i)) {
-                  return (
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      {...rest}
-                    >
-                      {children}
-                    </a>
-                  );
-                }
-
-                return (
-                  <Link to={href}>
-                    <a {...rest}>{children}</a>
-                  </Link>
-                );
-              },
-            }}
-          />
-        </p>
+        <div className="my-5 has-text-justified content">
+            {plainTextBody && renderRichText(post.content, {
+                // renderMark: {
+                //   [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+                // },
+                // renderNode: {
+                //   [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+                //   [BLOCKS.EMBEDDED_ASSET]: (node) => {
+                //     const { gatsbyImage, description } = node.data.target
+                //     return (
+                //     <GatsbyImage
+                //         image={getImage(gatsbyImage)}
+                //         alt={description}
+                //     />
+                //     )
+                //   },
+                // },
+              })}
+        </div>
         {/* {post.tags.map((tag) => (
           <div className="pr-2">
             <span className="tag is-light is-rounded is-size-6">#{tag}</span>
           </div>
         ))} */}
         <p className="my-4 is-size-6">
-          Published on {post.date} by {post.author.name}
-          {/* Published on {post.date} by {post.author.name} | {post.author.title} */}
+          Published on {post.publishedDate} by {post.author.name}
+          {/* Published on {post.publishedDate} by {post.author.name} | {post.author.title} */}
         </p>
-        {/* {post.relatedPosts.length > 0 && (
-          <div className="tabs is-large">
-            <ul>
-              <li>Further reading</li>
-            </ul>
+        {post.relatedBlogPosts.length > 0 && (
+          <div>
+            <div className="tabs is-large">
+              <ul>
+                <li>Further reading</li>
+              </ul>
+            </div>
+            <div className="columns is-multiline">
+              {post.relatedBlogPosts.map(({ title, featuredImage, shortDescription, slug }) => (
+                <div className="column is-4" key={title}>
+                  <div className="card">
+                    <div className="card-image">
+                      <figure className="image">
+                        <img src={featuredImage.publicUrl} alt="Related post" />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <span className="title is-size-4">
+                        <Link to={`/blog/${slug}`}>{title}</Link>
+                      </span>
+                      <p>{shortDescription.shortDescription}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
-        <div className="columns is-multiline">
-          {post.relatedPosts.map(({ title, featuredImage, shortDescription, slug }) => (
-            <div className="column is-4">
-              <div className="card">
-                <div className="card-image">
-                  <figure className="image">
-                    <img src={featuredImage.publicUrl} alt="Related post" />
-                  </figure>
-                </div>
-                <div className="card-content">
-                  <span className="title is-size-4">
-                    <Link to={`/blog/${slug}`}>{title}</Link>
-                  </span>
-                  <p>{shortDescription.shortDescription}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
       </section>
     </PageLayout>
   );

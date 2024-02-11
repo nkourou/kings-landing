@@ -10,13 +10,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         }
     }
     `)
-
     result.data.allContentfulPageBlogPost.nodes.forEach(({id, slug}) => {
         createPage({
             path: `/blog/${slug}`,
             component: require.resolve(`./src/templates/PostPage.js`),
             context: {
-                id,
+                id: id
             }
         })
     })
