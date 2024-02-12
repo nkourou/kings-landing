@@ -15,8 +15,8 @@ const Pricing = () => {
                   <Emoji emoji='💰'/> Pricing
                 </p>
                 <button className="button card-header-icon is-warning is-large is-size-2 has-text-weight-bold" id="pricing-tag">
-                    <span><span class="price-tag has-text-grey">$49</span> $29</span>
-                    <span class='help tag has-background-warning-light'><Emoji emoji='🎉'/> 40% off </span>
+                    <span><span className="price-tag has-text-grey">$49</span> $29</span>
+                    <span className='help tag has-background-warning-light'><Emoji emoji='🎉'/> 40% off </span>
                 </button>
               </header>
               <div className="card-content">

@@ -1,36 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-// const pageQuery = graphql`
-// query ($id: String) {
-//     contentfulPageBlogPost(id: {eq: $id}) {
-//       id
-//       title
-//       slug
-//       shortDescription {
-//         id
-//         shortDescription
-//       }
-//       seoFields {
-//         id
-//       }
-//       publishedDate(formatString: "MMMM Do, YYYY")
-//       author {
-//         name
-//         avatar {
-//           publicUrl
-//         }
-//       }
-//       featuredImage {
-//         gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 424, height: 212)
-//       }
-//       content {
-//         raw
-//       }
-//     }
-//   }
-// `;
 const pageQuery = graphql`
 query {
     allContentfulPageBlogPost(sort: { publishedDate: DESC }) {
@@ -39,9 +11,8 @@ query {
           id
           title
           slug
-          shortDescription {
-            id
-            shortDescription
+          summary {
+            summary
           }
           seoFields {
             id
@@ -55,7 +26,7 @@ query {
           }
           featuredImage {
             publicUrl
-            gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 424, height: 212)
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 424, height: 212)
           }
           content {
             raw
@@ -80,7 +51,8 @@ const Blog = () => {
               <div className="card-image">
               <Link to={`/blog/${slug}`}>
                 <figure className="image">
-                  <img src={post.featuredImage.publicUrl} alt="Blog cover" />
+                  {/* <img src={post.featuredImage.publicUrl} alt="Blog cover" /> */}
+                  <GatsbyImage image={post.featuredImage.gatsbyImageData} alt={post.title}/>
                 </figure>
                 </Link>
               </div>
@@ -90,13 +62,13 @@ const Blog = () => {
                     <figure className="image is-48x48">
                       <img
                         src={post.author.avatar.publicUrl}
-                        alt="WuruZeka logo"
+                        alt="author avatar"
                         className="is-rounded"
                       />
                     </figure>
                   </div>
                   <div className="media-content">
-                    <p className="title is-size-5">
+                    <p className="">
                       <Link to={`/blog/${slug}`} className="blog-title-link">
                         {post.title}
                       </Link>
@@ -105,7 +77,7 @@ const Blog = () => {
                 </div>
 
                 <div className="content is-size-6">
-                  <p>{post.shortDescription.shortDescription}</p>
+                  <p>{post.summary.summary}</p>
                 </div>
               </div>
               <div className="card-content">
