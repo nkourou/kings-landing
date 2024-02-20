@@ -18,17 +18,6 @@ export const pageQuery = graphql`
       title
       subtitle
       slug
-      summary {
-        summary
-      }
-      seoFields {
-        id
-        pageTitle
-        pageDescription {
-          id
-          pageDescription
-        }
-      }
       publishedDate(formatString: "MMMM Do, YYYY")
       author {
         name
@@ -47,8 +36,8 @@ export const pageQuery = graphql`
         id
         title
         slug
-        summary {
-          summary
+        content {
+          raw
         }
         featuredImage {
           publicUrl
@@ -58,7 +47,14 @@ export const pageQuery = graphql`
     }
   }
     `;
-
+    // seoFields {
+    //   id
+    //   pageTitle
+    //   pageDescription {
+    //     id
+    //     pageDescription
+    //   }
+    // }
 class PostPage extends React.Component {
   render() {
     const post = this.props.data.contentfulPageBlogPost;
@@ -164,7 +160,7 @@ class PostPage extends React.Component {
                 </ul>
               </div>
               <div className="columns is-multiline">
-                {post.relatedBlogPosts.map(({ title, featuredImage, summary, slug }) => (
+                {post.relatedBlogPosts.map(({ title, featuredImage, content, slug }) => (
                   <div className="column is-4" key={title}>
                     <div className="card">
                       <div className="card-image">
@@ -177,7 +173,7 @@ class PostPage extends React.Component {
                       </div>
                       <div className="card-content">
                         <Link to={`/blog/${slug}`}>{title}</Link>
-                        <p className="is-size-6">{summary.summary}</p>
+                        <p className="is-size-6">{documentToPlainTextString(JSON.parse(content.raw)).substring(0, 100)}..</p>
                       </div>
                     </div>
                   </div>

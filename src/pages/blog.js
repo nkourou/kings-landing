@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import PageLayout from "../components/pagelayout";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
 
 const pageQuery = graphql`
 query {
@@ -13,9 +14,6 @@ query {
           slug
           summary {
             summary
-          }
-          seoFields {
-            id
           }
           publishedDate(formatString: "MMMM Do, YYYY")
           author {
@@ -37,15 +35,15 @@ query {
 `;
 
 const Blog = () => {
-  const posts = useStaticQuery(pageQuery);
-//   console.log(posts)
+  const posts = useStaticQuery(pageQuery).allContentfulPageBlogPost.nodes;
+
   return (
     <PageLayout
       pageTitle="Blog"
       pageLink="blog"
     >
       <div className="columns is-multiline mx-3">
-        {posts.allContentfulPageBlogPost.nodes.map(({ slug, ...post }) => (
+        {posts.map(({ slug, ...post }) => (
           <div className="column is-4" key={slug}>
             <div className="card is-flex is-flex-direction-column">
               <div className="card-image">
@@ -77,10 +75,8 @@ const Blog = () => {
                 </div>
 
                 <div className="content is-size-6">
-                  <p>{post.summary.summary}</p>
+                  <p>{documentToPlainTextString(JSON.parse(post.content.raw)).substring(0, 200)}..</p>
                 </div>
-              </div>
-              <div className="card-content">
                 <span className="help">
                   Published on <time date={post.publishedDate}>{post.publishedDate}</time>
                 </span>

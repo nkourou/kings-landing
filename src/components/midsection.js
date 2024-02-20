@@ -24,8 +24,7 @@ const Midsection = () => {
               </h3>
               <div className="card-content">
                 <p className="subtitle is-size-4">
-                  The average score of IELTS test takers without preparation
-                  is <strong>6.53</strong> is less than the minimum required.
+                  The average IELTS band score of <strong>6.53</strong> is less than the minimum required.
                   {/* for immigration to countries like Canada, and Australia. */}
                 </p>
               </div>
@@ -103,7 +102,8 @@ const Midsection = () => {
                   Personalized learning
                 </h1>
                 <p className="subtitle" data-config-id="desc1">
-                  Not only is the content personal to you, we also ramp up the time your need to spend per day as the exam day reaches closer in order to optimize your target band score. Yes, our AI tunes your learning path after every module you do!
+                  Not only is the content personal to you, we also ramp up the excercises as the exam day reaches closer to optimize your target band scores. 
+                  {/* Yes, our AI tunes your learning path after every module you do! */}
                 </p>
               </div>
             </div>
@@ -129,9 +129,7 @@ const Midsection = () => {
                   Artifical Intelligence
                 </h1>
                 <p className="subtitle" data-config-id="desc2">
-                  We use the latest in NLP, ASR and learning science to get deeper insights
-                  into your skills level. We build short modules that you
-                  can finish these modules in 10 minutes.
+                  We use the latest in NLP, ASR and learning science to get deeper insights into your skills level. We build short modules that you can finish in less than 20 minutes.
                 </p>
               </div>
             </div>
@@ -160,8 +158,7 @@ const Midsection = () => {
                   Our <span className="has-text-info">A.I.</span> and{" "}
                   <span className="has-text-danger">IELTS certified</span>{" "}
                   teachers work together to decide what is best for you.
-                  However, in case you need 1:1 help, our teachers are here when
-                  you need it.
+                  However, in case you need 1:1 help, our teachers are here to offer support.
                 </p>
               </div>
             </div>
