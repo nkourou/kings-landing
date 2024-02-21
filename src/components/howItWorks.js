@@ -65,8 +65,8 @@ const HowItWorks = () => {
                   2. Treatment
                 </h1>
                 <p className="subtitle is-5" data-config-id="desc2">
-                  We leverage bleeding edge advancements in learning science as
-                  well as behavorial psychology to build short modules that you can finish in less than 20 minutes per day.
+                  We leverage bleeding edge advancements in learning science to build short modules that you can finish in less than 20 minutes per day.
+                  {/* as well as behavorial psychology  */}
                 </p>
               </div>
             </div>

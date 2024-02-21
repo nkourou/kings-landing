@@ -105,5 +105,8 @@ dist
 
 public/*
 .DS_Store
-graphcms-fragments/
+graphcms-fragments
 *.code-workspace
+public
+.cache
+node_modules
