@@ -152,7 +152,7 @@ class PostPage extends React.Component {
             Published on {post.publishedDate} by {post.author.name}
             {/* Published on {post.publishedDate} by {post.author.name} | {post.author.title} */}
           </p>
-          {post.relatedBlogPosts.length > 0 && (
+          {post.relatedBlogPosts && post.relatedBlogPosts.length > 0 && (
             <div>
               <div className="tabs is-large">
                 <ul>
