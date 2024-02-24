@@ -59,7 +59,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ["/preview/**", "https://wz-preview.netlify.app/**"],
           // Defaults to https://www.googletagmanager.com
           // Delays processing pageview events on route update (in milliseconds)
           delayOnRouteUpdate: 0,
