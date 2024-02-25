@@ -1,17 +1,17 @@
 // https://github.com/alxshelepenok/gatsby-starter-lumen/blob/master/gatsby-config.js
 
-const siteUrl = process.env.ROOT_URL || 'https://wuruzeka.com'
+const siteUrl = process.env.DEPLOY_PRIME_URL | process.env.ROOT_URL || 'https://wuruzeka.com'
  
-// const siteUrl = "localhost:8000"
 module.exports = {
   siteMetadata: {
     title: 'Wuru Zeka',
     siteTitleShort: 'wuru_zeka', // short_name for manifest
     pathPrefix: '/',
-    siteImg: 'https://github.com/nkourou/nkourou.github.io/raw/main/imgs/open-graph.jpg',
-    siteLogo: 'https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg',
+    siteImg: `${siteUrl}/static/wz_header.jpg`,
+    // siteImg: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/dashboard.png',
+    siteLogo: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/logo_light.png',
     author: 'Wuru Zeka',
-    description: 'AI based IELTS Writing & Speaking correction service with free IETLS full mock test simulator and tests!',
+    description: 'AI based IELTS Writing & Speaking correction service with free IETLS full mock test simulator',
     minibio: 'Platform to get your writing and speaking evaluated by IELTS Certified experts with decades of experience.',
     keywords: `ielts speaking correction, ielts writing correction, mock tests ielts, ielts writing, ielts speaking, ielts writing task 1 sample answer, ielts writing task 2 sample answer, ielts practice test, agree disagree essay ielts, ielts score chart, ielts speaking questions with answers, ielts writing task 2 topics`,
     twitter: 'https://twitter.com/wuruzeka',
@@ -23,7 +23,7 @@ module.exports = {
     appUrl: process.env.APP_URL || "https://app.wuruzeka.com",
     organization: { 
       name: "Wuru Zeka Inc.", 
-      logo: "https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg", 
+      logo: "https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/logo_light.png", 
       url: siteUrl 
     }
   },
@@ -35,7 +35,6 @@ module.exports = {
   //  },
   plugins: [
     "gatsby-plugin-sass",
-    // "gatsby-plugin-gatsby-cloud",
     "gatsby-transformer-remark",
     "gatsby-plugin-image",
     // "gatsby-plugin-scroll-reveal-fixed",

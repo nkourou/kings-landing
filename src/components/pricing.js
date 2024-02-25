@@ -15,8 +15,8 @@ const Pricing = () => {
                   <Emoji emoji='💰'/> Pricing
                 </p>
                 <button className="button card-header-icon is-warning is-large is-size-2 has-text-weight-bold" id="pricing-tag">
-                    <span><span className="price-tag has-text-grey">$49</span> $29</span>
-                    <span className='help tag has-background-warning-light'><Emoji emoji='🎉'/> 40% off </span>
+                    <span><span className="price-tag has-text-grey">$50</span> $25</span>
+                    <span className='help tag has-background-warning-light'><Emoji emoji='🎉'/> 50% off </span>
                 </button>
               </header>
               <div className="card-content">
@@ -25,7 +25,8 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Unlimited AI <Emoji emoji='🦄'/> diagnosis, evaluations and exercises
+                        {/* Unlimited AI <Emoji emoji='🦄'/> diagnosis, evaluations and exercises */}
+                        Comprehensive progress tracking and personalized study plan
                       </p>
                     </li>
                     {/* <li>
@@ -44,19 +45,21 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Unlimited question-answering with IELTS experts
+                        {/* Unlimited question-answering with IELTS experts */}
+                        2 full-length practice tests with detailed answer explanations
                       </p>
                     </li>
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        2 writing and 1 speaking evaluation by IELTS certified teachers
+                        Includes 4 writing and 2 speaking evaluation by IELTS certified teachers
                       </p>
                     </li>
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        100 Reading, Writing, Speaking and Listening mock tests
+                        {/* 100 Reading, Writing, Speaking and Listening mock tests */}
+                        Personalized feedback on writing and speaking tasks from expert IELTS instructors
                       </p>
                     </li>
                     <li>
