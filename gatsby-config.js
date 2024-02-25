@@ -2,16 +2,16 @@
 
 const siteUrl = process.env.ROOT_URL || 'https://wuruzeka.com'
  
-// const siteUrl = "localhost:8000"
 module.exports = {
   siteMetadata: {
     title: 'Wuru Zeka',
     siteTitleShort: 'wuru_zeka', // short_name for manifest
     pathPrefix: '/',
-    siteImg: 'https://github.com/nkourou/nkourou.github.io/raw/main/imgs/open-graph.jpg',
-    siteLogo: 'https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg',
-    author: 'Kwitanga Education Group',
-    description: 'AI based IELTS Writing & Speaking correction service with free IETLS full mock test simulator and tests!',
+    siteImg: `${siteUrl}/images/wz_header.jpg`,
+    // siteImg: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/dashboard.png',
+    siteLogo: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/logo_light.png',
+    author: 'Wuru Zeka',
+    description: 'AI based IELTS Writing & Speaking correction service with free IETLS full mock test simulator',
     minibio: 'Platform to get your writing and speaking evaluated by IELTS Certified experts with decades of experience.',
     keywords: `ielts speaking correction, ielts writing correction, mock tests ielts, ielts writing, ielts speaking, ielts writing task 1 sample answer, ielts writing task 2 sample answer, ielts practice test, agree disagree essay ielts, ielts score chart, ielts speaking questions with answers, ielts writing task 2 topics`,
     twitter: 'https://twitter.com/wuruzeka',
@@ -23,7 +23,7 @@ module.exports = {
     appUrl: process.env.APP_URL || "https://app.wuruzeka.com",
     organization: { 
       name: "Wuru Zeka Inc.", 
-      logo: "https://wuruzeka.com/static/logo-69580c490bdff69a56b3422793238446.svg", 
+      logo: "https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/logo_light.png", 
       url: siteUrl 
     }
   },
@@ -35,7 +35,6 @@ module.exports = {
   //  },
   plugins: [
     "gatsby-plugin-sass",
-    // "gatsby-plugin-gatsby-cloud",
     "gatsby-transformer-remark",
     "gatsby-plugin-image",
     // "gatsby-plugin-scroll-reveal-fixed",
@@ -59,7 +58,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ["/preview/**", "https://wz-preview.netlify.app/**"],
           // Defaults to https://www.googletagmanager.com
           // Delays processing pageview events on route update (in milliseconds)
           delayOnRouteUpdate: 0,
@@ -99,77 +98,7 @@ module.exports = {
       },
       __key: "pages",
     },
-    // {
-    //   resolve: "gatsby-source-graphcms",
-    //   options: {
-    //     id: process.env.CONTENTFUL_ID,
-    //     token: process.env.CONTENTFUL_TOKEN,
-    //     url: process.env.CONTENTFUL_URL,
-    //     // endpoint: process.env.WZ_GRAPH_CMS_API,
-    //     // token: process.env.WZ_GRAPH_TOKEN
-    //   }
-    // },
-                // gcms {
-            //   posts {
-            //     slug
-            //     updatedAt
-            //   }
-            // }
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-          query: `
-          {
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-
-            
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-          }
-          `,
-          // gcms {
-          //   allContentfulPageBlogPost(sort: {publishedDate: DESC}) {
-          //     nodes {
-          //       slug
-          //     }
-          //   }
-          // }
-        resolveSiteUrl: () => siteUrl,
-        resolvePages: ({
-          allSitePage: { edges: allPages },
-          // gcms: { allContentfulPageBlogPost: nodes },
-          site: { siteMetadata: metadata }
-        }) => {
-          // const wpNodeMap = nodes.reduce((acc, node) => {
-          //   const { slug } = node
-          //   acc[`/blog/${slug}`] = node
-
-          //   return acc
-          // }, {})
-
-          return allPages.map(edge => {
-            const path = metadata.siteUrl + edge.node.path
-            // return { path, ...wpNodeMap[edge.node.path] }
-            return { path }
-          })
-        },
-        serialize: ({ path, updatedAt }) => {
-          return {
-            url: path,
-            lastmod: updatedAt,
-          }
-        },
-      },
-    },
+    "gatsby-plugin-sitemap",
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

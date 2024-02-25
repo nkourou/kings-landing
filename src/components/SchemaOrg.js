@@ -54,7 +54,7 @@ export default React.memo(
               url: image,
             },
             description,
-            authorName: {
+            author: {
               "@type": "Person",
               name: authorName,
             },
