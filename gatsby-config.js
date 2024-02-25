@@ -1,6 +1,6 @@
 // https://github.com/alxshelepenok/gatsby-starter-lumen/blob/master/gatsby-config.js
 
-const siteUrl = process.env.ROOT_URL || 'https://wuruzeka.com'
+const siteUrl = process.env.DEPLOY_PRIME_URL | process.env.ROOT_URL || 'https://wuruzeka.com'
  
 module.exports = {
   siteMetadata: {
