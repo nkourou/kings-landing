@@ -7,7 +7,7 @@ module.exports = {
     title: 'Wuru Zeka',
     siteTitleShort: 'wuru_zeka', // short_name for manifest
     pathPrefix: '/',
-    siteImg: `${siteUrl}/static/wz_header.jpg`,
+    siteImg: `${siteUrl}/images/wz_header.jpg`,
     // siteImg: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/dashboard.png',
     siteLogo: 'https://raw.githubusercontent.com/nkourou/kings-landing/main/src/images/logo_light.png',
     author: 'Wuru Zeka',
