@@ -1,6 +1,6 @@
 // https://github.com/alxshelepenok/gatsby-starter-lumen/blob/master/gatsby-config.js
 
-const siteUrl = "https://deploy-preview-11--leafy-platypus-c3f20c.netlify.app" || process.env.ROOT_URL || 'https://wuruzeka.com'
+const siteUrl = process.env.ROOT_URL || 'https://wuruzeka.com'
  
 module.exports = {
   siteMetadata: {
