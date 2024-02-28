@@ -6,7 +6,7 @@ const PrivacySection = () => (
       <div className="columns">
         <div className="column is-8">
           <h1 className="title is-size-1">Privacy Policy</h1>
-          <h2 className="subtitle">Last Update: July 27, 2021</h2>
+          <h2 className="subtitle">Last Updated: January 22, 2024</h2>
           <p>
             IELTS is a registered trademark of University of Cambridge ESOL, the
             British Council, and IDP Education Australia.

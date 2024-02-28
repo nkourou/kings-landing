@@ -5,7 +5,6 @@ import HelmetC from "./helmetc";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import Cookie from "./cookie";
-import { Link } from "gatsby";
 
 const PageLayout = ({ pageTitle, pageLink, excerpt, image, slug, date, authorName, children }) => (
   <>
@@ -22,9 +21,9 @@ const PageLayout = ({ pageTitle, pageLink, excerpt, image, slug, date, authorNam
     <section className="mb-6 hero is-warning">
       <div className="hero-body">
         <h1 className="title">
-          <Link to={`/${pageLink}`}>WuruZeka | Blog</Link>
+          {pageTitle}
         </h1>
-        <h2 className="subtitle">The AI tutor app for IELTS</h2>
+        <h2 className="subtitle">{excerpt || 'Your ultimate online destination for IELTS General Test prep!'}</h2>
       </div>
     </section>
     <div className="container">{children}</div>

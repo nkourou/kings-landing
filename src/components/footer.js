@@ -15,6 +15,7 @@ const Footer = () => {
                         twitter
                         instagram
                         medium
+                        description
                       }
                     }
                   } 
@@ -46,11 +47,10 @@ const Footer = () => {
               </div>
             </article>
             <div className="is-size-6">
-              <hr />
+              {/* <hr /> */}
               <p>
-                Science backed app for people who want to identify their
-                weakness and improve them. Because rote memorization &amp;
-                passive learning has failed them!
+                {/* Science backed app for people who want to identify their weakness and improve them. Because rote memorization passive learning has failed them! */}
+                {data.site.siteMetadata.description}
               </p>
               {/* <hr />
               <a href="http://www.singpaledulabs.ai">© Singpal Edu AI Labs</a> */}
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
           <div className="column is-7 is-6-widescreen is-offset-2-widescreen">
             <div className="columns">
-              {/* <div className="column is-4">
+              <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Product</p>
                   <ul className="menu-list no-disc">
@@ -68,20 +68,20 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/blog" activeClassName="is-active">Blog</Link>
+                    </li>
+                    <li>
                       <Link to="/technology" activeClassName="is-active">
                         Technology
                       </Link>
                     </li>
                   </ul>
                 </div>
-              </div> */}
+              </div>
               <div className="column is-4">
                 <div className="menu">
                   <p className="menu-label">Company</p>
                   <ul className="menu-list no-disc">
-                    <li>
-                      <Link to="/blog" activeClassName="is-active">Blog</Link>
-                    </li>
                     <li>
                       <Link to="/about-us" activeClassName="is-active">
                         About Us

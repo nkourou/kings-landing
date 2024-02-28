@@ -5,7 +5,7 @@ import PageLayout from '../components/pagelayout';
 import PrivacySection from '../components/privacysection';
 
 const Privacy = () => (
-    <PageLayout pageTitle="Privacy" pageLink="privacy">
+    <PageLayout pageTitle="Privacy" pageLink="privacy-policy">
         <PrivacySection />
     </PageLayout>
 );

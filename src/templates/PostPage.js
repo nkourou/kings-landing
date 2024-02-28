@@ -77,8 +77,8 @@ class PostPage extends React.Component {
         authorName={post.author.name}
       >
         <div className="has-text-centered">
-          <h1 className="title">{post.title}</h1>
-          {post.subtitle && <h3 className="subtitle">{post.subtitle}</h3>}
+          {/* <h1 className="title">{post.title}</h1>
+          {post.subtitle && <h3 className="subtitle">{post.subtitle}</h3>} */}
           <GatsbyImage image={post.featuredImage.gatsbyImageData} alt={post.title}/>
         </div>
         <section className="section">
