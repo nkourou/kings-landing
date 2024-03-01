@@ -19,7 +19,7 @@ const Midsection = () => {
                 src="../images/undraw_Airport_re_oqk1.svg"
               /> */}
               {/* <FaGlobeAsia className="mr-2" /> */}
-              <h3 className="title is-spaced is-size-3 has-text-centered">
+              <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
                 3.5+ Million test takers
               </h3>
               <div className="card-content">
@@ -36,7 +36,7 @@ const Midsection = () => {
                 alt="Passive learning"
                 src="../images/undraw_book_lover_mkck.svg"
               /> */}
-              <h3 className="title is-spaced is-size-3 has-text-centered">
+              <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
                 Passive learning <Emoji emoji="😕" />
               </h3>
               <div className="card-content">
@@ -53,7 +53,7 @@ const Midsection = () => {
                 alt="We diagnose and fix it"
                 src="../images/undraw_doctors_hwty.svg"
               /> */}
-              <h3 className="title is-spaced is-size-3 has-text-centered">
+              <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
               Wuru Zeka magic <Emoji emoji="🧙🏼‍♀️" />
               </h3>
               <div className="card-content">
