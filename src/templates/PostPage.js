@@ -140,7 +140,7 @@ class PostPage extends React.Component {
               </nav>
             </div>
           </article>
-          <div className="my-5 has-text-justified content">
+          <div className="my-5 has-text-justified content has-text-grey-dark">
               {renderRichText(post.content)}
           </div>
           {/* {post.tags.map((tag) => (
