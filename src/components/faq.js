@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {FaAngleUp} from 'react-icons/fa';
+import { Link } from 'gatsby';
 
 const Collapse = (props) => {
 	const [state, setState] = useState({cardState: false});
@@ -16,7 +17,7 @@ const Collapse = (props) => {
 			<div className="card" aria-hidden={cardState ? "false" : "true"}
 			// style={{background: cardState ? null : 'white',}}
 			>
-				<header
+				<a type="button"
 					className="card-header"
 					style={{
 						cursor: "pointer",
@@ -37,7 +38,7 @@ const Collapse = (props) => {
 							<FaAngleUp />
 						</span>
 					</div>
-				</header>
+				</a>
 				<div
 					className="card-content"
 					style={{
@@ -65,7 +66,7 @@ const Collapse = (props) => {
 // Can I use Wuru Zeka on multiple devices, and is there a mobile app available for on-the-go learning?
 // What measures does Wuru Zeka take to ensure the privacy and security of my personal information?
 
-function FAQ() {
+function Faq() {
 	return (
 		<section id="faq" className="section">
 			<div className="container">
@@ -76,42 +77,35 @@ function FAQ() {
 				<div className="columns is-multiline is-centered">
 					<Collapse title="How does WZ help improve IELTS scores?">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							Great question, see the <Link
+							to="/#how-it-works">how it works</Link> section to learn more.
 						</p>
 					</Collapse>
 					<Collapse title="Would my tests be evaluated by Human or AI?">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							Your tests are evaluated entirely by certified ex IELTS examiners.
 						</p>
 					</Collapse>
 					<Collapse title="How does WZ customize the study plan and materials for each student?">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							Once you give a mock test, our evaluators identify your weaknesses and lets the AI know about them. 
+							The AI then creates a personalized study plan for you, which gets updated everytime you take another test.
 						</p>
 					</Collapse>
 					<Collapse title="Is there a mobile app available for on-the-go learning?">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							We are working on it, sign-up to our app to get notified via e-mail as soon as it's available.
 						</p>
 					</Collapse>
 					<Collapse title="Can I get a refund if I don't like the platform">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							Absolutely, please reach out to support@wuruzeka.com with your feedback and we'll refund no questions asked.
 						</p>
 					</Collapse>
 					<Collapse title="What kind of support and guidance can I expect from the human mentors at Wuru Zeka?">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse elementum mauris et porta mattis.
+							While most of our students are able to improve their scores using the platform. 
+							However, for those that still are unable to improve, our teachers do offer 1:1 consultation. At any time, do not hesitate to reach out to us at support@wuruzeka.com for help regarding this.
 						</p>
 					</Collapse>
 				</div>
@@ -120,4 +114,4 @@ function FAQ() {
 	);
 }
 
-export default FAQ;
+export default Faq;

@@ -8,7 +8,7 @@ import Cookie from './cookie';
 import Pricing from './pricing';
 import Testimonials from './testimonials';
 import HowItWorks from './howItWorks';
-import FAQ from './faq';
+import Faq from './faq';
 
 const Layout = ({ children }) => (
 	<div>
@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
 		<Testimonials  />
 		<Pricing />
 		<HowItWorks />
-		<FAQ />
+		<Faq />
 		<Cookie />
 		<Footer />
 	</div>
