@@ -5,7 +5,7 @@ import { FaRegCheckCircle } from 'react-icons/fa';
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="mb-6">
+    <section id="pricing" className="section">
       <div className="container">
         <div className="columns is-centered px-3">
           <div className="column is-three-quarters">
@@ -15,7 +15,7 @@ const Pricing = () => {
                   <Emoji emoji='💰'/> Pricing
                 </p>
                 <button className="button card-header-icon is-warning is-large is-size-2 has-text-weight-bold" id="pricing-tag">
-                    <span><span className="price-tag has-text-grey">$50</span> $25</span>
+                    <span><span className="price-tag has-text-grey">$99</span> $50</span>
                     <span className='help tag has-background-warning-light'><Emoji emoji='🎉'/> 50% off </span>
                 </button>
               </header>
@@ -46,13 +46,13 @@ const Pricing = () => {
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
                         {/* Unlimited question-answering with IELTS experts */}
-                        2 full-length practice tests with detailed answer explanations
+                        3 full-length practice tests with detailed answer explanations
                       </p>
                     </li>
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
-                        Includes 4 writing and 2 speaking evaluation by IELTS certified teachers
+                        Includes 6 writing and 3 speaking evaluation by IELTS certified teachers
                       </p>
                     </li>
                     <li>

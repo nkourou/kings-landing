@@ -9,7 +9,7 @@ const HowItWorks = () => {
         id="how-it-works"
         data-section-id="3"
         data-category="howitworks"
-        className="section mb-6"
+        className="section has-background-white-bis"
       >
         <div className="columns py-3 is-centered is-vcentered">
           <div className="column is-6">
@@ -28,7 +28,7 @@ const HowItWorks = () => {
                 How it works ?
               </h2>
             </div>
-            <div className="is-flex mb-6">
+            <div className="is-flex mb-5">
               <div>
                 <h1
                   className="title is-3 is-spaced mb-3"
@@ -38,12 +38,12 @@ const HowItWorks = () => {
                 </h1>
                 <p className="subtitle is-4" data-config-id="desc1">
                   We use the latest in natural language processing (NLP) and
-                  automated speech recognition (ASR) to get even deeper insights
-                  into your skills level.
+                  automated speech recognition (ASR) to get deeper insights
+                  into your skill levels.
                 </p>
               </div>
             </div>
-            <div className="is-flex mb-6 ">
+            <div className="is-flex mb-5">
               <div>
                 <h1
                   className="title is-3 is-spaced mb-3"
