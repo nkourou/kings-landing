@@ -228,3 +228,44 @@ a.navbar-item.active-link {
 	text-decoration-color: red;
 	// text-decoration-thickness: 50px;
 }
+
+// testimonials
+.show-more_wrapper-overlay {
+  z-index: 1;
+  height: 20em;
+  background-image: linear-gradient(rgba(249,250,251,0),#f9fafb 70%);
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.special1 {
+	transform: translateX(60%)
+}
+
+.special2 {
+	transform: translateX(-40%)
+}
+
+.special3 {
+	transform: translateX(40%)
+}
+
+article.media.box {
+	border-radius:20px; 
+	// padding:0
+}
+
+.eight-em {
+	width: 10em
+}
+
+.ten-em {
+	width: 12em
+}
+
+figure>p>img {
+	border-radius: 20px 0 0 20px
+}

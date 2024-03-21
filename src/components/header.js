@@ -70,7 +70,8 @@ const Header = () => {
           className="subtitle is-size-4-desktop is-size-5-touch"
           data-config-id="description"
         >
-          Let AI fill your gaps in english with targeted learning!
+          {/* Let AI fill your gaps in english with targeted learning! */}
+          AI-Powered Personalized Learning for Unmatched Progress!
         </h2>
         <div className="buttons is-centered">
           <a href="https://app.wuruzeka.com/auth/sign-up"

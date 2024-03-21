@@ -52,8 +52,8 @@ const Footer = () => {
                 {/* Science backed app for people who want to identify their weakness and improve them. Because rote memorization passive learning has failed them! */}
                 {data.site.siteMetadata.description}
               </p>
-              {/* <hr />
-              <a href="http://www.singpaledulabs.ai">© Singpal Edu AI Labs</a> */}
+              <hr />
+              <p>© 2024 Wuru Zeka, Inc. All rights reserved</p>
             </div>
           </div>
           <div className="column is-7 is-6-widescreen is-offset-2-widescreen">

@@ -57,7 +57,7 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
           <meta itemprop="image" content={siteImage} />
 
           {/* OpenGraph tags */}
-          <meta property="og:type" content="product" />
+          <meta property="og:type" content="website" />
           <meta property="og:title" content={siteTitle} />
           <meta
             property="og:description"
