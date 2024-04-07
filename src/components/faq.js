@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {FaAngleUp} from 'react-icons/fa';
 import { Link } from 'gatsby';
 
-const Collapse = (props) => {
+export const Collapse = (props) => {
 	const [state, setState] = useState({cardState: false});
 
 	const toggleCardState = () => {
@@ -17,7 +17,7 @@ const Collapse = (props) => {
 			<div className="card" aria-hidden={cardState ? "false" : "true"}
 			// style={{background: cardState ? null : 'white',}}
 			>
-				<a type="button"
+				<a type="button" 
 					className="card-header"
 					style={{
 						cursor: "pointer",
