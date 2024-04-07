@@ -54,13 +54,6 @@ class BookPage extends React.Component {
 	render() {
 		const BUCKET_PATH = 'https://storage.googleapis.com/kubi-speech/imgs/people/book_review_people'
 		const post = this.props.data.contentfulPageBook;
-		const plainTextBody = documentToPlainTextString(JSON.parse(post.contentBody.raw))
-		const AVG_READING_SPEED = 150;
-		let readTime = plainTextBody.split(" ").length / AVG_READING_SPEED;
-		readTime =
-			readTime < 1
-				? `${ Math.floor(readTime * 60) } seconds`
-				: `${ Math.floor(readTime) } min`;
 
 		return (
 			<PageLayout
@@ -168,7 +161,7 @@ class BookPage extends React.Component {
 								<div className="media-content">
 									{/* <span className="title is-size-4">{post.author.name}</span> */}
 									{/* <br /> */}
-									{readTime} read
+									{/* {readTime} read */}
 								</div>
 								<div className="media-right">
 									<nav className="level">
