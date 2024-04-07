@@ -71,6 +71,9 @@ const Footer = () => {
                       <Link to="/blog" activeClassName="is-active">Blog</Link>
                     </li>
                     <li>
+                      <Link to="/book" activeClassName="is-active">Books</Link>
+                    </li>
+                    <li>
                       <Link to="/technology" activeClassName="is-active">
                         Technology
                       </Link>

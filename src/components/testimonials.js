@@ -49,14 +49,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 									<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">5</span>
+													<span className="tag is-large">5</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success is-light has-text-weight-bold">
+													<span className="tag is-large is-success is-light has-text-weight-bold">
 														7.5
 													</span>
 												</p>
@@ -64,16 +64,16 @@ const Testimonials = () => {
 													I had been struggling with my IELTS band score for quite some time before I discovered Wuru Zeka. The AI + Human service provided by them has been a game-changer. The personalized study plan and regular feedback from the mentors helped me identify and correct my weak areas. Highly recommended!
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/jaspal.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Jaspal from India <Emoji emoji='🇮🇳'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -94,14 +94,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 									<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">6.5</span>
+													<span className="tag is-large">6.5</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success has-text-weight-bold">
+													<span className="tag is-large is-success has-text-weight-bold">
 														8.5
 													</span>
 												</p>
@@ -109,16 +109,16 @@ const Testimonials = () => {
 													Wuru Zeka has been a fantastic resource for me to improve my IELTS band score. The AI-driven study materials are tailored to my needs, and the human mentors provide valuable guidance and feedback. I've seen a great improvement in my speaking and writing skills. Thank you, Wuru Zeka!
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/mei.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Mei from China <Emoji emoji='🇨🇳'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -141,14 +141,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 									<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">6</span>
+													<span className="tag is-large">6</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success is-light has-text-weight-bold">
+													<span className="tag is-large is-success is-light has-text-weight-bold">
 														7.5
 													</span>
 												</p>
@@ -156,16 +156,16 @@ const Testimonials = () => {
 													I cannot thank Wuru Zeka enough for helping me identify my weaknesses and work on them. I am now much more confident in my English skills and feel prepared for my future studies abroad.
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/dara.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Dara from Cambodia <Emoji emoji='🇰🇭'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -185,14 +185,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 								<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">6</span>
+													<span className="tag is-large">6</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success has-text-weight-bold">
+													<span className="tag is-large is-success has-text-weight-bold">
 														8.5
 													</span>
 												</p>
@@ -200,16 +200,16 @@ const Testimonials = () => {
 												Wuru Zeka is an amazing platform for improving one's IELTS performance. My score went from 6 to 8.5, would highly recommend it to anyone looking to achieve their target IELTS band score.
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/haruto.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Haruto from Japan <Emoji emoji='🇯🇵'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -230,14 +230,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 								<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">5</span>
+													<span className="tag is-large">5</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success is-light has-text-weight-bold">
+													<span className="tag is-large is-success is-light has-text-weight-bold">
 														6.5
 													</span>
 												</p>
@@ -245,16 +245,16 @@ const Testimonials = () => {
 												I am incredibly grateful for Wuru Zeka's assistance. The support from the human mentors have been invaluable in identifying my weak areas and providing targeted practice to overcome them. My score has improved tremendously.
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/nurul.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Nurul from Malaysia <Emoji emoji='🇲🇾'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -276,14 +276,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 								<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">5</span>
+													<span className="tag is-large">5</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success is-light has-text-weight-bold">
+													<span className="tag is-large is-success is-light has-text-weight-bold">
 														6.5
 													</span>
 												</p>
@@ -291,16 +291,16 @@ const Testimonials = () => {
 												Outstanding experience in improving my IELTS band score and would highly recommend Wuru Zeka to anyone looking to achieve their IELTS goals.
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/tae.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Tae-hyun from South Korea <Emoji emoji='🇰🇷'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -321,14 +321,14 @@ const Testimonials = () => {
 							<div className="tile is-parent">
 								<div className="tile is-child">
 								<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">7</span>
+													<span className="tag is-large">7</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success has-text-weight-bold">
+													<span className="tag is-large is-success has-text-weight-bold">
 														8
 													</span>
 												</p>
@@ -337,16 +337,16 @@ const Testimonials = () => {
 													{/* The AI-generated study materials and the support of human mentors have been incredibly helpful in enhancing my skills. I would recommend Wuru Zeka to anyone looking to improve their IELTS band score. */}
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/sandeep.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Sandeep from Nepal <Emoji emoji='🇳🇵'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
@@ -368,14 +368,14 @@ const Testimonials = () => {
 								<div className="tile is-child">
 
 								<article
-										class="media box"
+										className="media box"
 									>
-										<div class="media-content">
-											<div class="content">
+										<div className="media-content">
+											<div className="content">
 												<p>
-													<span class="tag is-large">5.5</span>
+													<span className="tag is-large">5.5</span>
 													<FaAngleDoubleRight className="mx-2 has-text-grey-lighter" />
-													<span class="tag is-large is-success is-light has-text-weight-bold">
+													<span className="tag is-large is-success is-light has-text-weight-bold">
 														7
 													</span>
 												</p>
@@ -383,16 +383,16 @@ const Testimonials = () => {
 													Saved me from giving IELTS the third time!
 												</p>
 											</div>
-											<nav class="level is-mobile">
-												<div class="level-left">
-													<figure class="image is-64x64">
+											<nav className="level is-mobile">
+												<div className="level-left">
+													<figure className="image is-64x64">
 														<img
-															class="is-rounded"
+															className="is-rounded"
 															src={`${BUCKET_PATH}/marlon.png`}
 															alt="Student"
 														/>
 													</figure>
-													<div class="pl-4">
+													<div className="pl-4">
 														<p><strong>Marlon from Philippines <Emoji emoji='🇵🇭'/></strong></p>
 														<p>
 															<FaStar className="mr-2 has-text-warning" />
