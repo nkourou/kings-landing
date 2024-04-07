@@ -615,7 +615,7 @@ class BookPage extends React.Component {
 										We are working on it, sign-up to our app to get notified via e-mail as soon as it's available.
 									</p>
 								</Collapse>
-								<Collapse title="Can I get a refund if I don't like the book">
+								<Collapse title="Can I get a refund if I don't like the book?">
 									<p>
 										Absolutely, please reach out to support@wuruzeka.com with your feedback and we'll refund no questions asked.
 									</p>
