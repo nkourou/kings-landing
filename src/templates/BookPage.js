@@ -607,7 +607,7 @@ class BookPage extends React.Component {
 								</Collapse>
 								<Collapse title="Can I get 1:1 coaching if I need more help?">
 									<p>
-										Yes, please reach out to use via e-mail or chat to set-up a session with an IELTS teacher.
+										Yes, please reach out to us via e-mail or chat to set-up a session with an IELTS teacher.
 									</p>
 								</Collapse>
 								<Collapse title="Is there a mobile app available for on-the-go learning?">
