@@ -1,9 +1,10 @@
 import React from "react";
 import {
-  FaTwitter,
+  FaYoutube,
   FaInstagram,
   FaUser,
 } from "react-icons/fa";
+import { FaXTwitter, FaY } from "react-icons/fa6";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -14,7 +15,6 @@ const Footer = () => {
                       siteMetadata {
                         twitter
                         instagram
-                        medium
                         description
                       }
                     }
@@ -143,8 +143,18 @@ const Footer = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaTwitter className="mr-2" />
+                        <FaXTwitter className="mr-2" />
                         Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={data.site.siteMetadata.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaYoutube className="mr-2" />
+                        YouTube
                       </a>
                     </li>
                     {/* <li>

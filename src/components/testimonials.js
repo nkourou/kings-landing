@@ -19,7 +19,7 @@ const Testimonials = () => {
 			if (!ticking && -1000 < offsetTop < 1000) {
 				window.requestAnimationFrame(function () {
 					ticking = false;
-					document.querySelector('.special1').style.transform = 'translateX(' + (60 - (window.scrollY - 2500) / 10) + '%)';
+					document.querySelector('.special1').style.transform = 'translateX(' + (100 - (window.scrollY - 2500) / 10) + '%)';
 					document.querySelector('.special2').style.transform = 'translateX(' + (-40 + (window.scrollY - 2500) / 20) + '%)';
 					document.querySelector('.special3').style.transform = 'translateX(' + (40 - (window.scrollY - 2500) / 40) + '%)';
 				});

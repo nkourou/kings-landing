@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import patternImg from "../images/pattern.png";
 import dashboardImg from "../images/dashboard.png";
 import "./style.scss";
 import Typed from "typed.js";
+import {FaRegPlayCircle, FaMicrophone} from 'react-icons/fa';
+
 // class Header extends React.Component {
 const Header = () => {
   // determined if page has scrolled and if the view is on mobile
@@ -20,30 +22,46 @@ const Header = () => {
         });
       }
     };
-    document.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("scroll", handleScroll, {passive: true});
     return () => {
       // clean up the event handler when the component unmounts
       document.removeEventListener("scroll", handleScroll);
     };
   }, [state.scrolled]);
 
+  const vidRef = useRef(null);
+  const vidButtonRef = useRef(null);
+  const playVideo = () => {
+    vidRef.current.play()
+    // hide overlay play button styles, set by 'video__play-button'
+    vidButtonRef.current.classList.add('is-playing');
+  };
+  const pauseVideo = () => {
+    vidRef.current.pause();
+    // show overlay play button styles, set by 'video__play-button'
+    vidButtonRef.current.classList.remove('is-playing');
+  };
+  const handleToggleVideo = () => (vidRef.current.paused ? playVideo() : pauseVideo());
+
   return (
     <section
       id="headers"
       data-section-id="1"
       data-category="headers"
-      className="section is-background-contain is-background-no-repeat"
+      className="section is-background-contain is-background-no-repeat has-background-white-bis"
     >
-    <a
-      className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${
-        state.scrolled ? "" : "is-hidden"
-        }`}
-      href="https://app.wuruzeka.com"
-    >
-      Try for free
-    </a>
-
-      <div className="mx-auto has-text-centered">
+      <a
+        className={`button is-primary is-rounded is-size-5 is-hidden-mobile has-text-weight-bold tertiary-header-action ${ state.scrolled ? "" : "is-hidden"
+          }`}
+        href="https://app.wuruzeka.com/auth/sign-up"
+      >
+        Try for free
+      </a>
+      {/* TODO: add in future      
+      <div className="header-background-icons has-text-grey-light">
+        <FaMicrophone />
+      </div> */}
+      <div className="mx-auto m-6 has-text-centered">
         <h1 className="title is-size-1-desktop text-5xl is-size-2-touch">
           <span data-config-id="header1 is-inline-block">Improve your </span>
           <span className="block">
@@ -67,7 +85,7 @@ const Header = () => {
           </span>
         </h1>
         <h2
-          className="subtitle is-size-4-desktop is-size-5-touch"
+          className="subtitle mt-2 is-size-3-desktop is-size-4-touch"
           data-config-id="description"
         >
           {/* Let AI fill your gaps in english with targeted learning! */}
@@ -82,10 +100,10 @@ const Header = () => {
                       "
             data-config-id="primary-hero"
           >
-            Get started
+            Start with a free mock test
           </a>
         </div>
-          {/* <a
+        {/* <a
             className="button is-danger is-rounded is-light is-size-4-desktop is-hidden-mobile"
             href="https://ieltsregistration.britishcouncil.org/test-chooser"
             data-config-id="secondary-hero"
@@ -94,10 +112,24 @@ const Header = () => {
           </a> */}
       </div>
       {/*  data-sal="slide-up" */}
-      <div className="mx-auto is-relative is-centered">
+      <div className="mx-auto is-relative is-centered container">
         <img src={patternImg} alt="pattern background" />
-        <figure className="header-image image">
-          <img src={dashboardImg} alt="Gif of platform" />
+        <figure className="header-image image" id="hero-video-wrapper">
+          {/* <img src={dashboardImg} alt="Gif of platform" /> */}
+          <video
+            id="shuffle-video" muted="" playsInline="" playbackRate="0.5"
+            poster={dashboardImg}
+            src="https://storage.googleapis.com/kubi-speech/vids/wuruzeka-hero.mp4" type="video/mp4"
+            className="header-video" ref={vidRef} onClick={handleToggleVideo}></video>
+          {/* <video
+              ref={vidRef}
+              autoPlay="" loop="false" 
+              src="https://static.shuffle.dev/files/1692476908/shuffle-hero.mp4"
+              type="video/mp4"
+            /> */}
+          <button ref={vidButtonRef} onClick={handleToggleVideo} className="video-play-btn has-text-grey-dark">
+            <FaRegPlayCircle />
+          </button>
         </figure>
       </div>
     </section>
@@ -128,38 +160,38 @@ const TypedText = () => {
         e = t.strings[e];
         return "speaking" === e
           ? (a.classList.remove(
-              "wrap-listening",
-              "wrap-writing",
-              "wrap-reading"
-            ),
+            "wrap-listening",
+            "wrap-writing",
+            "wrap-reading"
+          ),
             a.classList.add("wrap-speaking"))
           : "listening" === e
-          ? (a.classList.remove(
+            ? (a.classList.remove(
               "wrap-speaking",
               "wrap-writing",
               "wrap-reading"
             ),
-            a.classList.add("wrap-listening"))
-          : "writing" === e
-          ? (a.classList.remove(
-              "wrap-speaking",
-              "wrap-listening",
-              "wrap-reading"
-            ),
-            a.classList.add("wrap-writing"))
-          : "reading" === e
-          ? (a.classList.remove(
-              "wrap-speaking",
-              "wrap-writing",
-              "wrap-listening"
-            ),
-            a.classList.add("wrap-reading"))
-          : (a.classList.remove(
-              "wrap-listening",
-              "wrap-writing",
-              "wrap-reading"
-            ),
-            a.classList.add("wrap-speaking"));
+              a.classList.add("wrap-listening"))
+            : "writing" === e
+              ? (a.classList.remove(
+                "wrap-speaking",
+                "wrap-listening",
+                "wrap-reading"
+              ),
+                a.classList.add("wrap-writing"))
+              : "reading" === e
+                ? (a.classList.remove(
+                  "wrap-speaking",
+                  "wrap-writing",
+                  "wrap-listening"
+                ),
+                  a.classList.add("wrap-reading"))
+                : (a.classList.remove(
+                  "wrap-listening",
+                  "wrap-writing",
+                  "wrap-reading"
+                ),
+                  a.classList.add("wrap-speaking"));
       },
     };
 

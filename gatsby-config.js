@@ -14,6 +14,7 @@ module.exports = {
     minibio: 'Discover Wuru Zeka - the go-to complete online hub for IELTS General Test exam preparation with expert-curated courses, tips, and articles on improving English, full mock tests, Speaking and Writing evaluations from certified IELTS Tutors. #LearnWithWuruzeka',
     keywords: `ielts speaking correction, ielts writing correction, mock tests ielts, ielts writing, ielts speaking, ielts writing task 1 sample answer, ielts writing task 2 sample answer, ielts practice test, agree disagree essay ielts, ielts score chart, ielts speaking questions with answers, ielts writing task 2 topics`,
     twitter: 'https://twitter.com/wuruzeka',
+    youtube: 'https://www.youtube.com/@WuruZekaLearning',
     instagram: "https://www.instagram.com/wuruzeka_learning/",
     fbAppID: process.env.WZ_FB_ID,
     mixpanel: process.env.WZ_MXPNL_ID,

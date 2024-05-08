@@ -66,7 +66,8 @@ const HowItWorks = () => {
                   3. Re-evaluation
                 </h1>
                 <p className="subtitle is-4" data-config-id="desc3">
-                  Our A.I. and IELTS certified teachers work together to assess the effect of treatment in step 2 and go back to step 1 with new set of exercises that help you take your skills to the next level.
+                  Our <span className="has-text-info">A.I.</span> and{" "}
+                  <span className="has-text-danger">IELTS certified</span>{" "} teachers work together to assess the effect of treatment in step 2 and go back to step 1 with new set of exercises that help you take your skills to the next level.
                 </p>
               </div>
             </div>

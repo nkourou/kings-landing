@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logoImg from "../images/logo_light.png";
+import logoImg from "../images/logo_dark.png";
 
 import { Link } from 'gatsby';
 
@@ -32,7 +32,7 @@ const Navbar = () => {
   
 	return (
 	<header>
-		<nav className="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+		<nav className="navbar has-background-white-bis is-spaced" role="navigation" aria-label="main navigation">
 				<div className="navbar-brand">
 					<Link className="navbar-item" to="/" data-config-id="brand">
 						<img src={logoImg} alt="Wuru Zeka logo" />

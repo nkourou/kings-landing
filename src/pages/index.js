@@ -2,7 +2,6 @@ import React from 'react';
 
 import Layout from '../components/landinglayout';
 import Header from '../components/header';
-import Midsection from '../components/midsection';
 
 // export const Head = () => (
 //     <>
@@ -15,7 +14,6 @@ const IndexPage = ({ pageTitle, children }) => {
     return (
         <Layout>
             <Header />
-            <Midsection />
         </Layout>
     )
 };

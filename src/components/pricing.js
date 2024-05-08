@@ -71,6 +71,12 @@ const Pricing = () => {
                     <li>
                       <p>
                         <FaRegCheckCircle className="mr-2 has-text-success"/>
+                        Unlimited practice from a pool of 1000+ exercises with AI tutor.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <FaRegCheckCircle className="mr-2 has-text-success"/>
                         100% satisfaction peace-of-mind money back guarantee
                       </p>
                     </li>
@@ -90,7 +96,7 @@ const Pricing = () => {
                   <div className="has-text-centered">
                       <a href="https://app.wuruzeka.com/auth/sign-up" 
                       className="button is-primary is-large is-rounded has-text-weight-semibold">
-                        Try for free today!
+                        Boost Your IELTS Score Today – Join Now!
                       </a>
                   </div>
                 </div>

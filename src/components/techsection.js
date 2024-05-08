@@ -1,6 +1,6 @@
 import React from "react";
-import { FaRegCheckCircle } from "react-icons/fa";
-import { StaticImage } from "gatsby-plugin-image";
+import {FaRegCheckCircle} from "react-icons/fa";
+import {StaticImage} from "gatsby-plugin-image";
 
 const TechSection = () => {
   return (
@@ -183,13 +183,124 @@ const TechSection = () => {
           </p>
         </section>
 
+        <section
+          id="features"
+          data-section-id="3"
+          data-category="features"
+          className="section mb-6"
+        >
+          <div className="columns py-3 is-centered is-vcentered">
+            <div className="column is-6 pr-6" data-sal="slide-right">
+              <div className="mb-6">
+                <h2 className="mt-4 title is-size-3" data-config-id="01_header">
+                  Key Features
+                </h2>
+              </div>
+              <div className="is-flex mb-6">
+                <div className="mr-4 has-text-primary">
+                  <svg
+                    className="image is-32x32"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="title is-4 is-spaced mb-3" data-config-id="header1">
+                    Personalized learning
+                  </h1>
+                  <p className="subtitle" data-config-id="desc1">
+                    Not only is the content personal to you, we also ramp up the excercises as the exam day reaches closer to optimize your target band scores.
+                    {/* Yes, our AI tunes your learning path after every module you do! */}
+                  </p>
+                </div>
+              </div>
+              <div className="is-flex mb-6 ">
+                <div className="mr-4 has-text-primary">
+                  <svg
+                    className="image is-32x32"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="title is-4 is-spaced mb-3" data-config-id="header2">
+                    Artifical Intelligence
+                  </h1>
+                  <p className="subtitle" data-config-id="desc2">
+                    We use the latest in NLP, ASR and learning science to get deeper insights into your skills level. We build short modules that you can finish in less than 20 minutes.
+                  </p>
+                </div>
+              </div>
+              <div className="is-flex">
+                <div className="mr-4 has-text-primary">
+                  <svg
+                    className="image is-32x32"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="title is-4 is-spaced mb-3" data-config-id="header3">
+                    1:1 tutoring
+                  </h1>
+                  <p className="subtitle" data-config-id="desc3">
+                    Our <span className="has-text-info">A.I.</span> and{" "}
+                    <span className="has-text-danger">IELTS certified</span>{" "}
+                    teachers work together to decide what is best for you.
+                    However, in case you need 1:1 help, our teachers are here to offer support.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6 is-hidden-touch" data-sal="slide-left">
+              <div className="p-6">
+                <StaticImage
+                  className="
+						  is-relative is-radius is-fullwidth is-object-cover is-radius
+						"
+                  src="../images/undraw_fixing_bugs_w7gi.svg"
+                  alt=""
+                  data-config-id="01_image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="section has-text-centered">
           <h1 className="writing-text is-size-1">
             Thousands of exercise modules, <br /> you only do the ones that
             improve you!
           </h1>
           <a
-            className="
+            className="mt-4
           button
           is-primary is-rounded is-large
           has-text-weight-bold

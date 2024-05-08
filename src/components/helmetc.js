@@ -82,7 +82,16 @@ const HelmetC = ({ title, excerpt, image, slug, date, isBlogPost, authorName }) 
             content={siteImage}
           />
           <meta name="twitter:card" content="summary_large_image" />
-
+          <script>
+            {/* {`
+            const hw = document.getElementById('hero-video-wrapper');
+            if (hw) hw.innerHTML = '<video ref={vidRef} poster="https://storage.googleapis.com/kubi-speech/imgs/wuruzeka-hero.png" id="shuffle-video" muted="" playsinline="" autoplay="" playbackrate="0.5" controls="" controlsList="nodownload" src="../../../../resources/wuruzeka-hero.mp4" class="header-video"></video>';
+            `} */}
+            {/* {`
+            const hw = document.getElementById('hero-video-wrapper');
+            if (hw) hw.innerHTML = '<video poster="https://storage.googleapis.com/kubi-speech/imgs/wuruzeka-hero.png" id="shuffle-video" muted="" playsinline="" autoplay="" playbackrate="0.5" controls="" controlsList="nodownload" src="https://storage.googleapis.com/kubi-speech/vids/wuruzeka-hero.mp4" class="header-video"></video>';
+            `} */}
+            </script>
           {/* <script
             type="text/javascript"
             async=""
