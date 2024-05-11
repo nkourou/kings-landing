@@ -12,23 +12,13 @@ const HowItWorks = () => {
         className="section has-background-white-bis"
       >
         <div className="columns py-3 is-centered is-vcentered">
-          <div className="column is-6">
-            <div className="p-6">
-              <StaticImage
-                src="../images/undraw_Master_plan_re_jvit.svg"
-                alt="learning as a loop"
-                data-config-id="01_image"
-                data-sal="slide-right"
-              />
-            </div>
-          </div>
-          <div className="column pr-6" data-sal="slide-left">
+          <div className="column pr-6 has-text-justified" data-sal="slide-left">
             <div className="mb-6">
               <h2 className="mt-4 title is-2" data-config-id="01_header">
                 How it works ?
               </h2>
             </div>
-            <div className="is-flex mb-5">
+            <div className="is-flex mb-6">
               <div>
                 <h1
                   className="title is-3 is-spaced mb-3"
@@ -43,7 +33,7 @@ const HowItWorks = () => {
                 </p>
               </div>
             </div>
-            <div className="is-flex mb-5">
+            <div className="is-flex mb-6">
               <div>
                 <h1
                   className="title is-3 is-spaced mb-3"
@@ -52,7 +42,7 @@ const HowItWorks = () => {
                   2. Treatment
                 </h1>
                 <p className="subtitle is-4" data-config-id="desc2">
-                  We leverage bleeding edge advancements in learning science to build short modules that you can finish in less than 20 minutes per day.
+                  We leverage bleeding edge advancements in learning science to build short modules that you can finish in less than 20 minutes a day.
                   {/* as well as behavorial psychology  */}
                 </p>
               </div>
@@ -70,6 +60,16 @@ const HowItWorks = () => {
                   <span className="has-text-danger">IELTS certified</span>{" "} teachers work together to assess the effect of treatment in step 2 and go back to step 1 with new set of exercises that help you take your skills to the next level.
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="column is-6">
+            <div className="p-6">
+              <StaticImage
+                src="../images/undraw_Master_plan_re_jvit.svg"
+                alt="learning as a loop"
+                data-config-id="01_image"
+                data-sal="slide-right"
+              />
             </div>
           </div>
         </div>

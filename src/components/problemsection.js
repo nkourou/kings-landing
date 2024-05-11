@@ -19,12 +19,17 @@ const ProblemSection = () => {
               /> */}
               {/* <FaGlobeAsia className="mr-2" /> */}
               <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
-                3.5+ Million test takers
+                {/* 3.5+ Million test takers */}
+                Stuck at 6.5 <Emoji emoji="😕" /> ?
               </h3>
               <div className="card-content">
                 <p className="subtitle is-size-4">
-                  The average IELTS band score of <strong>6.5</strong> is less than the minimum required
-                  for immigration to countries like Canada, and Australia.
+                  {/* The average IELTS band score of <strong>6.5</strong> is less than the minimum required */}
+                  {/* for immigration to countries like Canada, and Australia. */}
+                  {/* The average IELTS band of <strong>6.5</strong> is less than  */}
+                  {/* minimum required for immigration to Canada, UK and Australia. */}
+                  In 2024, students get to Band 7 using tools, not information. 
+                  Band 7 is the minimum for immigrating to Canada, UK and Australia.
                 </p>
               </div>
             </div>
@@ -36,11 +41,11 @@ const ProblemSection = () => {
                 src="../images/undraw_book_lover_mkck.svg"
               /> */}
               <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
-                Passive learning <Emoji emoji="😕" />
+                Passive learning sucks <Emoji emoji="👎🏻" />
               </h3>
               <div className="card-content">
                 <p className="subtitle is-size-4">
-                  Watching videos and giving mock tests over and over again is 
+                  Watching videos, giving mock tests over and over again is 
                   only practicing the same mistakes repeatedly.
                 </p>
               </div>
@@ -53,7 +58,7 @@ const ProblemSection = () => {
                 src="../images/undraw_doctors_hwty.svg"
               /> */}
               <h3 className="title is-spaced is-size-3 has-text-centered pt-4">
-              Wuru Zeka magic <Emoji emoji="🧙🏼‍♀️" />
+              Wuru Zeka magic <Emoji emoji="🪄" />
               </h3>
               <div className="card-content">
                 <p className="subtitle is-size-4">

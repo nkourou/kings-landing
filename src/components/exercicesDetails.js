@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const ExercisesDetails = () => {
   return (
     <>
-      <section className="mb-6">
+      <section className="section mb-6">
         <div className="container">
           <div className="columns is-8 is-variable">
             <div className="column is-6">

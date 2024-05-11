@@ -4,7 +4,7 @@ import {
   FaInstagram,
   FaUser,
 } from "react-icons/fa";
-import { FaXTwitter, FaY } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -15,6 +15,7 @@ const Footer = () => {
                       siteMetadata {
                         twitter
                         instagram
+                        youtube
                         description
                       }
                     }
