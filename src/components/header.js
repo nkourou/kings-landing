@@ -127,7 +127,7 @@ const Header = () => {
               src="https://static.shuffle.dev/files/1692476908/shuffle-hero.mp4"
               type="video/mp4"
             /> */}
-          <button ref={vidButtonRef} onClick={handleToggleVideo} className="video-play-btn has-text-grey-dark">
+          <button ref={vidButtonRef} onClick={handleToggleVideo} className="video-play-btn has-text-grey-dark is-centered-absolute">
             <FaRegPlayCircle />
           </button>
         </figure>

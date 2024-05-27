@@ -95,8 +95,9 @@ const Pricing = () => {
                   </ul>
                   <div className="has-text-centered">
                       <a href="https://app.wuruzeka.com/auth/sign-up" 
-                      className="button is-primary is-large is-rounded has-text-weight-semibold">
-                        Boost Your IELTS Score Today – Join Now!
+                      className="button is-primary is-large is-rounded is-size-5-mobile has-text-weight-semibold">
+                        <span className='is-hidden-mobile'>Boost Your IELTS Score Today – </span>
+                        <span>Join Now!</span>
                       </a>
                   </div>
                 </div>
