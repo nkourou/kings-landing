@@ -21,7 +21,7 @@ const Cookie = () => {
         aria-live="polite"
         aria-label="cookieconsent"
         aria-describedby="cookieconsent:desc"
-        className={`cookie-consent box ${isHaveCookieConsent ? 'is-hidden': ''}`}
+        className={`is-hidden-mobile cookie-consent box ${isHaveCookieConsent ? 'is-hidden': ''}`}
       >
         <div className="content">
           <p id="cookieconsent:desc" className="cc-message">
